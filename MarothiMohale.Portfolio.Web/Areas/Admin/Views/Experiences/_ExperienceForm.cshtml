@@ -1,5 +1,6 @@
 @model Experience
 <form method="post" class="form-grid admin-form">
+    <div asp-validation-summary="ModelOnly" class="validation-summary form-full"></div>
     <label>Title<input asp-for="Title" /><span asp-validation-for="Title"></span></label>
     <label>Organisation<input asp-for="Organization" /><span asp-validation-for="Organization"></span></label>
     <label>Location<input asp-for="Location" /><span asp-validation-for="Location"></span></label>

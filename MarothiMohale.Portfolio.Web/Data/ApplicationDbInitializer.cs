@@ -1,6 +1,8 @@
 using MarothiMohale.Portfolio.Web.Models;
+using MarothiMohale.Portfolio.Web.Configuration;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 namespace MarothiMohale.Portfolio.Web.Data;
 
@@ -15,8 +17,9 @@ public static class ApplicationDbInitializer
         var logger = services.GetRequiredService<ILoggerFactory>().CreateLogger("DatabaseInitialiser");
         var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
         var userManager = services.GetRequiredService<UserManager<ApplicationUser>>();
+        var options = services.GetRequiredService<IOptions<PortfolioOptions>>().Value;
 
-        await context.Database.MigrateAsync();
+        await MigrateDatabaseWithRetryAsync(context, logger, options, app.Lifetime.ApplicationStopping);
         await SeedRolesAsync(roleManager);
         await SeedAdminAsync(configuration, userManager);
         await SeedPortfolioAsync(context, logger);
@@ -159,6 +162,33 @@ public static class ApplicationDbInitializer
 
         await context.SaveChangesAsync();
         logger.LogInformation("Portfolio seed data ensured");
+    }
+
+    private static async Task MigrateDatabaseWithRetryAsync(
+        ApplicationDbContext context,
+        ILogger logger,
+        PortfolioOptions options,
+        CancellationToken cancellationToken)
+    {
+        var attempts = Math.Max(1, options.StartupMigrationMaxRetries);
+        var delaySeconds = Math.Max(1, options.StartupMigrationRetryDelaySeconds);
+
+        for (var attempt = 1; attempt <= attempts; attempt++)
+        {
+            try
+            {
+                await context.Database.MigrateAsync(cancellationToken);
+                logger.LogInformation("Database migration completed on attempt {Attempt}", attempt);
+                return;
+            }
+            catch (Exception ex) when (attempt < attempts)
+            {
+                logger.LogWarning(ex, "Database migration attempt {Attempt} failed. Retrying in {DelaySeconds}s.", attempt, delaySeconds);
+                await Task.Delay(TimeSpan.FromSeconds(delaySeconds), cancellationToken);
+            }
+        }
+
+        await context.Database.MigrateAsync(cancellationToken);
     }
 
     private static Project SeedProject(string title, string slug, string shortDescription, string fullDescription, string techStack, string gitHubUrl, string imageUrl, bool isFeatured, int displayOrder, DateTime createdAt, DateTime updatedAt)

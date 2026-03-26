@@ -23,7 +23,7 @@ public class ServicesController : Controller
     public IActionResult Create() => View(new ServiceOffering());
 
     [HttpPost]
-    public async Task<IActionResult> Create(ServiceOffering service, CancellationToken cancellationToken)
+    public async Task<IActionResult> Create([Bind("Title,Description,DisplayOrder")] ServiceOffering service, CancellationToken cancellationToken)
     {
         if (!ModelState.IsValid)
         {
@@ -51,7 +51,7 @@ public class ServicesController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, ServiceOffering service, CancellationToken cancellationToken)
+    public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,DisplayOrder")] ServiceOffering service, CancellationToken cancellationToken)
     {
         if (id != service.Id)
         {

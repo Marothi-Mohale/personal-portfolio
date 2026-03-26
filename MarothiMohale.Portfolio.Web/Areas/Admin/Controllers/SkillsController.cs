@@ -23,17 +23,25 @@ public class SkillsController : Controller
     public IActionResult Create() => View(new Skill());
 
     [HttpPost]
-    public async Task<IActionResult> Create(Skill skill, CancellationToken cancellationToken)
+    public async Task<IActionResult> Create([Bind("Name,Category,ProficiencyPercent,Summary,DisplayOrder")] Skill skill, CancellationToken cancellationToken)
     {
         if (!ModelState.IsValid)
         {
             return View(skill);
         }
 
-        _dbContext.Skills.Add(skill);
-        await _dbContext.SaveChangesAsync(cancellationToken);
-        TempData["AdminMessage"] = "Skill created.";
-        return RedirectToAction(nameof(Index));
+        try
+        {
+            _dbContext.Skills.Add(skill);
+            await _dbContext.SaveChangesAsync(cancellationToken);
+            TempData["AdminMessage"] = "Skill created.";
+            return RedirectToAction(nameof(Index));
+        }
+        catch (DbUpdateException)
+        {
+            ModelState.AddModelError(string.Empty, "The skill could not be saved. Please try again.");
+            return View(skill);
+        }
     }
 
     public async Task<IActionResult> Edit(int id, CancellationToken cancellationToken)
@@ -43,7 +51,7 @@ public class SkillsController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, Skill skill, CancellationToken cancellationToken)
+    public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Category,ProficiencyPercent,Summary,DisplayOrder")] Skill skill, CancellationToken cancellationToken)
     {
         if (id != skill.Id)
         {
@@ -55,10 +63,18 @@ public class SkillsController : Controller
             return View(skill);
         }
 
-        _dbContext.Update(skill);
-        await _dbContext.SaveChangesAsync(cancellationToken);
-        TempData["AdminMessage"] = "Skill updated.";
-        return RedirectToAction(nameof(Index));
+        try
+        {
+            _dbContext.Update(skill);
+            await _dbContext.SaveChangesAsync(cancellationToken);
+            TempData["AdminMessage"] = "Skill updated.";
+            return RedirectToAction(nameof(Index));
+        }
+        catch (DbUpdateException)
+        {
+            ModelState.AddModelError(string.Empty, "The skill could not be updated. Please try again.");
+            return View(skill);
+        }
     }
 
     public async Task<IActionResult> Delete(int id, CancellationToken cancellationToken)

@@ -23,17 +23,25 @@ public class TestimonialsController : Controller
     public IActionResult Create() => View(new Testimonial());
 
     [HttpPost]
-    public async Task<IActionResult> Create(Testimonial testimonial, CancellationToken cancellationToken)
+    public async Task<IActionResult> Create([Bind("AuthorName,AuthorRole,Company,Quote,IsFeatured,DisplayOrder")] Testimonial testimonial, CancellationToken cancellationToken)
     {
         if (!ModelState.IsValid)
         {
             return View(testimonial);
         }
 
-        _dbContext.Testimonials.Add(testimonial);
-        await _dbContext.SaveChangesAsync(cancellationToken);
-        TempData["AdminMessage"] = "Testimonial created.";
-        return RedirectToAction(nameof(Index));
+        try
+        {
+            _dbContext.Testimonials.Add(testimonial);
+            await _dbContext.SaveChangesAsync(cancellationToken);
+            TempData["AdminMessage"] = "Testimonial created.";
+            return RedirectToAction(nameof(Index));
+        }
+        catch (DbUpdateException)
+        {
+            ModelState.AddModelError(string.Empty, "The testimonial could not be saved. Please try again.");
+            return View(testimonial);
+        }
     }
 
     public async Task<IActionResult> Edit(int id, CancellationToken cancellationToken)
@@ -43,7 +51,7 @@ public class TestimonialsController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, Testimonial testimonial, CancellationToken cancellationToken)
+    public async Task<IActionResult> Edit(int id, [Bind("Id,AuthorName,AuthorRole,Company,Quote,IsFeatured,DisplayOrder")] Testimonial testimonial, CancellationToken cancellationToken)
     {
         if (id != testimonial.Id)
         {
@@ -55,10 +63,18 @@ public class TestimonialsController : Controller
             return View(testimonial);
         }
 
-        _dbContext.Update(testimonial);
-        await _dbContext.SaveChangesAsync(cancellationToken);
-        TempData["AdminMessage"] = "Testimonial updated.";
-        return RedirectToAction(nameof(Index));
+        try
+        {
+            _dbContext.Update(testimonial);
+            await _dbContext.SaveChangesAsync(cancellationToken);
+            TempData["AdminMessage"] = "Testimonial updated.";
+            return RedirectToAction(nameof(Index));
+        }
+        catch (DbUpdateException)
+        {
+            ModelState.AddModelError(string.Empty, "The testimonial could not be updated. Please try again.");
+            return View(testimonial);
+        }
     }
 
     public async Task<IActionResult> Delete(int id, CancellationToken cancellationToken)

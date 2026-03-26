@@ -1,6 +1,7 @@
 @model Profile
 <h1>Edit profile</h1>
 <form method="post" class="form-grid admin-form">
+    <div asp-validation-summary="ModelOnly" class="validation-summary form-full"></div>
     <label>Full Name<input asp-for="FullName" /><span asp-validation-for="FullName"></span></label>
     <label>Headline<input asp-for="Headline" /><span asp-validation-for="Headline"></span></label>
     <label>Email<input asp-for="Email" /><span asp-validation-for="Email"></span></label>

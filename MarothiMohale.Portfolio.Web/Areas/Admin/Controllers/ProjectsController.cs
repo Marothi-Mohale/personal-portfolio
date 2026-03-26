@@ -23,19 +23,27 @@ public class ProjectsController : Controller
     public IActionResult Create() => View(new Project { ImageUrl = "/images/project-custom.svg" });
 
     [HttpPost]
-    public async Task<IActionResult> Create(Project project, CancellationToken cancellationToken)
+    public async Task<IActionResult> Create([Bind("Title,Slug,ShortDescription,FullDescription,TechStack,GitHubUrl,LiveUrl,ImageUrl,IsFeatured,DisplayOrder")] Project project, CancellationToken cancellationToken)
     {
         if (!ModelState.IsValid)
         {
             return View(project);
         }
 
-        project.CreatedAt = DateTime.UtcNow;
-        project.UpdatedAt = DateTime.UtcNow;
-        _dbContext.Projects.Add(project);
-        await _dbContext.SaveChangesAsync(cancellationToken);
-        TempData["AdminMessage"] = "Project created.";
-        return RedirectToAction(nameof(Index));
+        try
+        {
+            project.CreatedAt = DateTime.UtcNow;
+            project.UpdatedAt = DateTime.UtcNow;
+            _dbContext.Projects.Add(project);
+            await _dbContext.SaveChangesAsync(cancellationToken);
+            TempData["AdminMessage"] = "Project created.";
+            return RedirectToAction(nameof(Index));
+        }
+        catch (DbUpdateException)
+        {
+            ModelState.AddModelError(string.Empty, "The project could not be saved. Check the slug and links, then try again.");
+            return View(project);
+        }
     }
 
     public async Task<IActionResult> Edit(int id, CancellationToken cancellationToken)
@@ -45,7 +53,7 @@ public class ProjectsController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, Project project, CancellationToken cancellationToken)
+    public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Slug,ShortDescription,FullDescription,TechStack,GitHubUrl,LiveUrl,ImageUrl,IsFeatured,DisplayOrder,CreatedAt")] Project project, CancellationToken cancellationToken)
     {
         if (id != project.Id)
         {
@@ -57,11 +65,19 @@ public class ProjectsController : Controller
             return View(project);
         }
 
-        project.UpdatedAt = DateTime.UtcNow;
-        _dbContext.Update(project);
-        await _dbContext.SaveChangesAsync(cancellationToken);
-        TempData["AdminMessage"] = "Project updated.";
-        return RedirectToAction(nameof(Index));
+        try
+        {
+            project.UpdatedAt = DateTime.UtcNow;
+            _dbContext.Update(project);
+            await _dbContext.SaveChangesAsync(cancellationToken);
+            TempData["AdminMessage"] = "Project updated.";
+            return RedirectToAction(nameof(Index));
+        }
+        catch (DbUpdateException)
+        {
+            ModelState.AddModelError(string.Empty, "The project could not be updated. Check the slug and links, then try again.");
+            return View(project);
+        }
     }
 
     public async Task<IActionResult> Delete(int id, CancellationToken cancellationToken)

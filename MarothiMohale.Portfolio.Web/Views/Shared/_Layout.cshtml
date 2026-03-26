@@ -60,7 +60,10 @@
                         <p class="footer-label">Connect</p>
                         @foreach (var link in footerLinks)
                         {
-                            <p><a href="@link.Url" target="_blank" rel="noreferrer">@link.Platform</a></p>
+                            @if (!string.IsNullOrWhiteSpace(link.Url))
+                            {
+                                <p><a href="@link.Url" target="_blank" rel="noreferrer">@link.Platform</a></p>
+                            }
                         }
                     </div>
                 </div>

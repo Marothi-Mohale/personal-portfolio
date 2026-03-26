@@ -1,5 +1,6 @@
 @model Skill
 <form method="post" class="form-grid admin-form">
+    <div asp-validation-summary="ModelOnly" class="validation-summary form-full"></div>
     <label>Name<input asp-for="Name" /><span asp-validation-for="Name"></span></label>
     <label>Category<input asp-for="Category" /><span asp-validation-for="Category"></span></label>
     <label>Proficiency<input asp-for="ProficiencyPercent" /><span asp-validation-for="ProficiencyPercent"></span></label>

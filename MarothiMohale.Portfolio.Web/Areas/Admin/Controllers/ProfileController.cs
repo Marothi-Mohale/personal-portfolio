@@ -24,16 +24,24 @@ public class ProfileController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(Profile profile, CancellationToken cancellationToken)
+    public async Task<IActionResult> Edit([Bind("Id,FullName,Headline,ProfessionalSummary,About,Email,Phone,Location,ResumeUrl,HeroPrimaryCtaUrl,HeroSecondaryCtaUrl")] Profile profile, CancellationToken cancellationToken)
     {
         if (!ModelState.IsValid)
         {
             return View(profile);
         }
 
-        _dbContext.Update(profile);
-        await _dbContext.SaveChangesAsync(cancellationToken);
-        TempData["AdminMessage"] = "Profile updated.";
-        return RedirectToAction(nameof(Edit));
+        try
+        {
+            _dbContext.Update(profile);
+            await _dbContext.SaveChangesAsync(cancellationToken);
+            TempData["AdminMessage"] = "Profile updated.";
+            return RedirectToAction(nameof(Edit));
+        }
+        catch (DbUpdateException)
+        {
+            ModelState.AddModelError(string.Empty, "The profile could not be updated. Please try again.");
+            return View(profile);
+        }
     }
 }

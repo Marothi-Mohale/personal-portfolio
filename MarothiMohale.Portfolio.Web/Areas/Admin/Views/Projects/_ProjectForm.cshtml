@@ -1,5 +1,6 @@
 @model Project
 <form method="post" class="form-grid admin-form">
+    <div asp-validation-summary="ModelOnly" class="validation-summary form-full"></div>
     <label>Title<input asp-for="Title" /><span asp-validation-for="Title"></span></label>
     <label>Slug<input asp-for="Slug" /><span asp-validation-for="Slug"></span></label>
     <label class="form-full">Short Description<textarea asp-for="ShortDescription" rows="3"></textarea><span asp-validation-for="ShortDescription"></span></label>

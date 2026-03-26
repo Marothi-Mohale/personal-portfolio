@@ -1,0 +1,22 @@
+info: MarothiMohale.Portfolio.Web[0]
+      Starting Marothi Mohale portfolio application
+info: Microsoft.EntityFrameworkCore.Migrations[20405]
+      No migrations were applied. The database is already up to date.
+info: DatabaseInitialiser[0]
+      Database migration completed on attempt 1
+info: DatabaseInitialiser[0]
+      Portfolio seed data ensured
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:5184
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Production
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web
+warn: Microsoft.AspNetCore.HttpsPolicy.HttpsRedirectionMiddleware[3]
+      Failed to determine the https port for redirect.
+info: MarothiMohale.Portfolio.Web.Middleware.RequestLoggingMiddleware[0]
+      HTTP GET / responded 200 in 386ms
+info: MarothiMohale.Portfolio.Web.Middleware.RequestLoggingMiddleware[0]
+      HTTP GET /health responded 200 in 204ms

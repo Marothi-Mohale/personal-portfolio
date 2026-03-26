@@ -139,3 +139,11 @@ C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\obj\Debug\net8.0\Maroth
 C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\obj\Debug\net8.0\MarothiMohale.Portfolio.Web.genruntimeconfig.cache
 C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\obj\Debug\net8.0\ref\MarothiMohale.Portfolio.Web.dll
 C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\obj\Debug\net8.0\MarothiMohale.Portfolio.Web.sourcelink.json
+C:\Users\ASUS\marothi-mohale\artifacts\hardening-build\appsettings.Development.json
+C:\Users\ASUS\marothi-mohale\artifacts\hardening-build\appsettings.json
+C:\Users\ASUS\marothi-mohale\artifacts\hardening-build\appsettings.Production.json
+C:\Users\ASUS\marothi-mohale\artifacts\hardening-build\MarothiMohale.Portfolio.Web.staticwebassets.runtime.json
+C:\Users\ASUS\marothi-mohale\artifacts\hardening-build\MarothiMohale.Portfolio.Web.deps.json
+C:\Users\ASUS\marothi-mohale\artifacts\hardening-build\MarothiMohale.Portfolio.Web.runtimeconfig.json
+C:\Users\ASUS\marothi-mohale\artifacts\hardening-build\MarothiMohale.Portfolio.Web.dll
+C:\Users\ASUS\marothi-mohale\artifacts\hardening-build\MarothiMohale.Portfolio.Web.pdb

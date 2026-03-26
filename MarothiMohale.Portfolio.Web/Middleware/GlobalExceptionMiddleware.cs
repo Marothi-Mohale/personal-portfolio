@@ -19,7 +19,23 @@ public class GlobalExceptionMiddleware
         }
         catch (Exception ex)
         {
-            _logger.LogError(ex, "Unhandled exception for {Path}", context.Request.Path);
+            _logger.LogError(ex, "Unhandled exception for {Method} {Path}", context.Request.Method, context.Request.Path);
+
+            if (context.Response.HasStarted)
+            {
+                throw;
+            }
+
+            context.Response.Clear();
+            context.Response.StatusCode = StatusCodes.Status500InternalServerError;
+
+            if (context.Request.Path.StartsWithSegments("/health"))
+            {
+                context.Response.ContentType = "application/json";
+                await context.Response.WriteAsync("{\"status\":\"Unhealthy\"}");
+                return;
+            }
+
             context.Response.Redirect("/Error/500");
         }
     }

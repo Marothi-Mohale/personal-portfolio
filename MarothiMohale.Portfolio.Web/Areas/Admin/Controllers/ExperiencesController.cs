@@ -23,17 +23,25 @@ public class ExperiencesController : Controller
     public IActionResult Create() => View(new Experience { StartDate = DateTime.UtcNow.Date });
 
     [HttpPost]
-    public async Task<IActionResult> Create(Experience experience, CancellationToken cancellationToken)
+    public async Task<IActionResult> Create([Bind("Title,Organization,Location,Summary,StartDate,EndDate,IsCurrent,DisplayOrder")] Experience experience, CancellationToken cancellationToken)
     {
         if (!ModelState.IsValid)
         {
             return View(experience);
         }
 
-        _dbContext.Experiences.Add(experience);
-        await _dbContext.SaveChangesAsync(cancellationToken);
-        TempData["AdminMessage"] = "Experience created.";
-        return RedirectToAction(nameof(Index));
+        try
+        {
+            _dbContext.Experiences.Add(experience);
+            await _dbContext.SaveChangesAsync(cancellationToken);
+            TempData["AdminMessage"] = "Experience created.";
+            return RedirectToAction(nameof(Index));
+        }
+        catch (DbUpdateException)
+        {
+            ModelState.AddModelError(string.Empty, "The experience could not be saved. Please try again.");
+            return View(experience);
+        }
     }
 
     public async Task<IActionResult> Edit(int id, CancellationToken cancellationToken)
@@ -43,7 +51,7 @@ public class ExperiencesController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> Edit(int id, Experience experience, CancellationToken cancellationToken)
+    public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Organization,Location,Summary,StartDate,EndDate,IsCurrent,DisplayOrder")] Experience experience, CancellationToken cancellationToken)
     {
         if (id != experience.Id)
         {
@@ -55,10 +63,18 @@ public class ExperiencesController : Controller
             return View(experience);
         }
 
-        _dbContext.Update(experience);
-        await _dbContext.SaveChangesAsync(cancellationToken);
-        TempData["AdminMessage"] = "Experience updated.";
-        return RedirectToAction(nameof(Index));
+        try
+        {
+            _dbContext.Update(experience);
+            await _dbContext.SaveChangesAsync(cancellationToken);
+            TempData["AdminMessage"] = "Experience updated.";
+            return RedirectToAction(nameof(Index));
+        }
+        catch (DbUpdateException)
+        {
+            ModelState.AddModelError(string.Empty, "The experience could not be updated. Please try again.");
+            return View(experience);
+        }
     }
 
     public async Task<IActionResult> Delete(int id, CancellationToken cancellationToken)

@@ -1,4 +1,5 @@
 using System.Text.Json;
+using MarothiMohale.Portfolio.Web.Configuration;
 using MarothiMohale.Portfolio.Web.Data;
 using MarothiMohale.Portfolio.Web.Middleware;
 using MarothiMohale.Portfolio.Web.Models;
@@ -22,6 +23,7 @@ Environment.SetEnvironmentVariable("APPDATA", appDataRoot);
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
 builder.Logging.AddDebug();
+builder.Services.Configure<PortfolioOptions>(builder.Configuration.GetSection(PortfolioOptions.SectionName));
 
 builder.Services
     .AddDataProtection()
@@ -80,6 +82,7 @@ else
 }
 
 app.UseMiddleware<GlobalExceptionMiddleware>();
+app.UseMiddleware<RequestLoggingMiddleware>();
 app.UseStatusCodePagesWithReExecute("/Error/{0}");
 if (!app.Environment.IsDevelopment())
 {

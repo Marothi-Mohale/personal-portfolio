@@ -6,7 +6,10 @@
         <h1>@Model.Project.Title</h1>
         <p class="lead">@Model.Project.ShortDescription</p>
         <div class="link-row">
-            <a class="button button-primary" href="@Model.Project.GitHubUrl" target="_blank" rel="noreferrer">View GitHub</a>
+            @if (!string.IsNullOrWhiteSpace(Model.Project.GitHubUrl))
+            {
+                <a class="button button-primary" href="@Model.Project.GitHubUrl" target="_blank" rel="noreferrer">View GitHub</a>
+            }
             @if (!string.IsNullOrWhiteSpace(Model.Project.LiveUrl))
             {
                 <a class="button button-secondary" href="@Model.Project.LiveUrl" target="_blank" rel="noreferrer">Open live site</a>
@@ -18,7 +21,7 @@
 <section class="section">
     <div class="container two-column">
         <article class="content-panel">
-            <img src="@Model.Project.ImageUrl" alt="" class="project-image detail-image" />
+            <img src="@Model.Project.ImageUrl" alt="" class="project-image detail-image" data-fallback-image="/images/project-custom.svg" />
             <p>@Model.Project.FullDescription</p>
         </article>
         <aside class="content-panel">

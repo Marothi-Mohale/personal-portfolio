@@ -1,5 +1,6 @@
 @model Testimonial
 <form method="post" class="form-grid admin-form">
+    <div asp-validation-summary="ModelOnly" class="validation-summary form-full"></div>
     <label>Author Name<input asp-for="AuthorName" /><span asp-validation-for="AuthorName"></span></label>
     <label>Author Role<input asp-for="AuthorRole" /><span asp-validation-for="AuthorRole"></span></label>
     <label>Company<input asp-for="Company" /><span asp-validation-for="Company"></span></label>

@@ -17,4 +17,13 @@
     const isOpen = nav?.classList.toggle("is-open");
     button?.setAttribute("aria-expanded", String(Boolean(isOpen)));
   });
+
+  document.querySelectorAll("img[data-fallback-image]").forEach((image) => {
+    image.addEventListener("error", () => {
+      const fallback = image.getAttribute("data-fallback-image");
+      if (fallback && image.getAttribute("src") !== fallback) {
+        image.setAttribute("src", fallback);
+      }
+    }, { once: true });
+  });
 })();
