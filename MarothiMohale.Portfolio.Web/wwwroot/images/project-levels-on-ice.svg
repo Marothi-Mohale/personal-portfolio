@@ -1,7 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
-  <rect width="800" height="480" fill="#07121f"/>
-  <path d="M0 350 Q200 280 400 360 T800 330 V480 H0Z" fill="#8de2ff"/>
-  <rect x="90" y="90" width="620" height="210" rx="28" fill="#10253c"/>
-  <text x="120" y="195" fill="#ebf1ff" font-family="Arial" font-size="52" font-weight="700">levels_on_ice</text>
-  <text x="120" y="248" fill="#5ed0c3" font-family="Arial" font-size="24">Interaction design with crisp visual rhythm.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Levels on Ice project cover">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#08131f"/>
+      <stop offset="100%" stop-color="#15364f"/>
+    </linearGradient>
+    <linearGradient id="ice" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ddfbff"/>
+      <stop offset="100%" stop-color="#84d9ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+  <path d="M0 352C94 308 187 294 281 310s178 45 275 35c85-9 161-44 244-33V480H0Z" fill="#d9f8ff"/>
+  <path d="M0 383C102 356 223 375 338 392s208 20 305-2 123-31 157-24V480H0Z" fill="#9adfff"/>
+  <rect x="84" y="74" width="632" height="272" rx="34" fill="#0c2031" stroke="#28506d"/>
+  <text x="118" y="148" fill="#8de2ff" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">INTERACTION SYSTEM</text>
+  <text x="118" y="214" fill="#edf4ff" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="700">levels_on_ice</text>
+  <text x="118" y="256" fill="#d1e4f6" font-family="Segoe UI, Arial, sans-serif" font-size="24">Smooth flow, visual rhythm, and clear screen logic.</text>
+  <rect x="118" y="286" width="190" height="16" rx="8" fill="#69d6ca"/>
+  <rect x="118" y="316" width="136" height="12" rx="6" fill="#d9f8ff" opacity=".8"/>
+  <rect x="524" y="118" width="132" height="166" rx="28" fill="#122b42"/>
+  <circle cx="590" cy="173" r="33" fill="url(#ice)"/>
+  <path d="M570 218c9-16 41-16 50 0" stroke="#8de2ff" stroke-width="8" stroke-linecap="round"/>
 </svg>

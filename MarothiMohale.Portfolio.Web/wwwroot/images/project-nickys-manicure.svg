@@ -1,7 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
-  <rect width="800" height="480" fill="#241622"/>
-  <rect x="80" y="80" width="640" height="320" rx="36" fill="#43253f"/>
-  <circle cx="620" cy="170" r="70" fill="#f7a6bf"/>
-  <text x="120" y="205" fill="#fff1f5" font-family="Arial" font-size="48" font-weight="700">nickys-manicure</text>
-  <text x="120" y="255" fill="#ffd5e1" font-family="Arial" font-size="24">Service-led UX for a client-facing brand.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Nicky's Manicure project cover">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2d1829"/>
+      <stop offset="100%" stop-color="#4f2743"/>
+    </linearGradient>
+    <linearGradient id="rose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffd2e1"/>
+      <stop offset="100%" stop-color="#f9a9c2"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+  <circle cx="640" cy="110" r="96" fill="#f8aac4" opacity=".2"/>
+  <rect x="76" y="72" width="648" height="336" rx="40" fill="#47253f" stroke="#6f4260"/>
+  <text x="114" y="150" fill="#ffd5e6" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">SERVICE BRAND EXPERIENCE</text>
+  <text x="114" y="214" fill="#fff3f8" font-family="Segoe UI, Arial, sans-serif" font-size="50" font-weight="700">nickys-manicure</text>
+  <text x="114" y="256" fill="#ffd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="24">Client-facing design with elegant conversion-focused structure.</text>
+  <rect x="114" y="294" width="210" height="52" rx="26" fill="url(#rose)"/>
+  <text x="156" y="327" fill="#4d223c" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Book an appointment</text>
+  <rect x="536" y="126" width="124" height="170" rx="30" fill="#5c3150"/>
+  <circle cx="598" cy="176" r="34" fill="#fff3f8"/>
+  <rect x="566" y="230" width="64" height="14" rx="7" fill="#ffd5e1"/>
+  <rect x="556" y="256" width="84" height="12" rx="6" fill="#f3b4c7"/>
 </svg>

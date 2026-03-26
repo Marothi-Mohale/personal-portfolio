@@ -14,7 +14,7 @@
         {
             <article class="card project-card editorial-card reveal reveal-up">
                 <div class="project-card-media">
-                    <img src="@project.ImageUrl" alt="" class="project-image" data-fallback-image="/images/project-custom.svg" />
+                    <img src="@project.ImageUrl" alt="@project.Title project cover" class="project-image" data-fallback-image="/images/project-custom.svg" />
                     <div class="project-overlay">
                         @if (project.IsFeatured)
                         {
@@ -25,6 +25,7 @@
                             <span class="badge">Portfolio</span>
                         }
                     </div>
+                    <div class="project-signature">Marothi Mohale portfolio</div>
                 </div>
                 <div class="card-body">
                     <div class="card-topline">

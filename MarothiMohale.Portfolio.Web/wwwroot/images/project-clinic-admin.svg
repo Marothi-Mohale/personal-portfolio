@@ -1,6 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
-  <rect width="800" height="480" fill="#10251f"/>
-  <rect x="80" y="80" width="640" height="320" rx="32" fill="#16332c"/>
-  <path d="M390 145h20v60h60v20h-60v60h-20v-60h-60v-20h60z" fill="#76e4b3"/>
-  <text x="120" y="345" fill="#ecfff4" font-family="Arial" font-size="48" font-weight="700">clinic-admin</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="clinic-admin project cover">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f241f"/>
+      <stop offset="100%" stop-color="#1d4339"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8af0c5"/>
+      <stop offset="100%" stop-color="#5fcca4"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+  <rect x="78" y="74" width="644" height="332" rx="38" fill="#14312a" stroke="#2a584d"/>
+  <text x="116" y="148" fill="#8af0c5" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">ADMINISTRATIVE WORKFLOWS</text>
+  <text x="116" y="214" fill="#ecfff4" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="700">clinic-admin</text>
+  <text x="116" y="256" fill="#cde9dd" font-family="Segoe UI, Arial, sans-serif" font-size="24">Records, visibility, and operations for clinic teams.</text>
+  <rect x="116" y="292" width="118" height="66" rx="18" fill="#102821"/>
+  <rect x="248" y="292" width="118" height="66" rx="18" fill="#102821"/>
+  <rect x="380" y="292" width="118" height="66" rx="18" fill="#102821"/>
+  <text x="144" y="333" fill="#8af0c5" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Files</text>
+  <text x="275" y="333" fill="#8af0c5" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Staff</text>
+  <text x="402" y="333" fill="#8af0c5" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700">Care</text>
+  <circle cx="610" cy="190" r="72" fill="url(#mint)"/>
+  <path d="M610 154h16v24h24v16h-24v24h-16v-24h-24v-16h24Z" fill="#123029"/>
 </svg>

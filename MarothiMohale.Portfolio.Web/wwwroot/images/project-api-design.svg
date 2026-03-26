@@ -1,7 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
-  <rect width="800" height="480" fill="#0c1728"/>
-  <circle cx="640" cy="110" r="120" fill="#183b55"/>
-  <rect x="80" y="110" width="640" height="260" rx="24" fill="#12263d" stroke="#5ed0c3" stroke-width="2"/>
-  <text x="120" y="205" fill="#8de2ff" font-family="Arial" font-size="54" font-weight="700">api design</text>
-  <text x="120" y="260" fill="#ebf1ff" font-family="Arial" font-size="24">Clean contracts. Clear resources. Reliable validation.</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="API Design project cover">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07121f"/>
+      <stop offset="100%" stop-color="#0e2d45"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#69d6ca"/>
+      <stop offset="100%" stop-color="#8dc5ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+  <circle cx="670" cy="92" r="120" fill="#163d58" opacity=".65"/>
+  <rect x="70" y="78" width="660" height="324" rx="32" fill="#0d2032" stroke="#274862"/>
+  <rect x="110" y="120" width="228" height="34" rx="17" fill="#13334b"/>
+  <text x="136" y="142" fill="#8de2ff" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">MAROTHI MOHALE</text>
+  <text x="110" y="205" fill="#edf4ff" font-family="Segoe UI, Arial, sans-serif" font-size="54" font-weight="700">api design</text>
+  <text x="110" y="248" fill="#c6d6ea" font-family="Segoe UI, Arial, sans-serif" font-size="24">Clean contracts. Strong validation. Developer-friendly APIs.</text>
+  <rect x="110" y="292" width="172" height="70" rx="18" fill="#10283c"/>
+  <rect x="304" y="292" width="172" height="70" rx="18" fill="#10283c"/>
+  <rect x="498" y="292" width="172" height="70" rx="18" fill="#10283c"/>
+  <text x="130" y="322" fill="#69d6ca" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">RESOURCES</text>
+  <text x="130" y="346" fill="#edf4ff" font-family="Segoe UI, Arial, sans-serif" font-size="18">REST-first modeling</text>
+  <text x="324" y="322" fill="#69d6ca" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">RULES</text>
+  <text x="324" y="346" fill="#edf4ff" font-family="Segoe UI, Arial, sans-serif" font-size="18">Validation and clarity</text>
+  <text x="518" y="322" fill="#69d6ca" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">STACK</text>
+  <text x="518" y="346" fill="#edf4ff" font-family="Segoe UI, Arial, sans-serif" font-size="18">ASP.NET Core</text>
+  <rect x="560" y="122" width="110" height="110" rx="26" fill="url(#accent)" opacity=".95"/>
+  <path d="M593 164h44M593 188h44M593 212h30" stroke="#07121f" stroke-width="10" stroke-linecap="round"/>
 </svg>

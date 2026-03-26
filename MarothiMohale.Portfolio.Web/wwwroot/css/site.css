@@ -407,6 +407,19 @@ p { color: var(--muted); line-height: 1.75; margin: 0 0 1rem; }
   display: flex;
   justify-content: flex-start;
 }
+.project-signature {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.45rem 0.72rem;
+  border-radius: 999px;
+  background: rgba(7, 17, 31, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #edf4ff;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  backdrop-filter: blur(10px);
+}
 .editorial-card .card-topline h2,
 .editorial-card .card-topline h3 { margin-bottom: 0.3rem; }
 .meta-line { color: var(--accent); font-size: 0.95rem; }

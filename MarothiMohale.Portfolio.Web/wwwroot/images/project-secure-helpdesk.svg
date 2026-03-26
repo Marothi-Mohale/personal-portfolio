@@ -1,6 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
-  <rect width="800" height="480" fill="#0b1017"/>
-  <rect x="100" y="95" width="600" height="290" rx="24" fill="#1a2330" stroke="#ffc857" stroke-width="2"/>
-  <path d="M400 160l70 30v52c0 48-31 91-70 108-39-17-70-60-70-108v-52z" fill="#ffc857"/>
-  <text x="140" y="330" fill="#ebf1ff" font-family="Arial" font-size="44" font-weight="700">secureHelpdesk</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="secureHelpdesk project cover">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c1016"/>
+      <stop offset="100%" stop-color="#1d2733"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe08d"/>
+      <stop offset="100%" stop-color="#ffc857"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="url(#bg)"/>
+  <rect x="78" y="76" width="644" height="328" rx="34" fill="#141d28" stroke="#314252"/>
+  <text x="118" y="148" fill="#ffc857" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">SECURE SUPPORT PLATFORM</text>
+  <text x="118" y="214" fill="#edf4ff" font-family="Segoe UI, Arial, sans-serif" font-size="52" font-weight="700">secureHelpdesk</text>
+  <text x="118" y="256" fill="#ccd6e4" font-family="Segoe UI, Arial, sans-serif" font-size="24">Role-aware workflows, trust, and operational reliability.</text>
+  <rect x="118" y="292" width="250" height="68" rx="18" fill="#101720" stroke="#28323e"/>
+  <text x="146" y="324" fill="#ffe08d" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">ACCESS LEVEL</text>
+  <text x="146" y="348" fill="#edf4ff" font-family="Segoe UI, Arial, sans-serif" font-size="18">Administrator approved</text>
+  <path d="M578 128l72 31v54c0 49-32 93-72 111-40-18-72-62-72-111v-54z" fill="url(#gold)"/>
+  <path d="M578 170a28 28 0 0 1 28 28v14h-56v-14a28 28 0 0 1 28-28Zm-18 42h36v34h-36Z" fill="#141d28"/>
 </svg>

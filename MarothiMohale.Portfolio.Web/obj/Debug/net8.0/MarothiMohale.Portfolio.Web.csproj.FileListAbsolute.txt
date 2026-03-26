@@ -156,3 +156,11 @@ C:\Users\ASUS\marothi-mohale\artifacts\ui-refresh-build\MarothiMohale.Portfolio.
 C:\Users\ASUS\marothi-mohale\artifacts\ui-refresh-build\MarothiMohale.Portfolio.Web.runtimeconfig.json
 C:\Users\ASUS\marothi-mohale\artifacts\ui-refresh-build\MarothiMohale.Portfolio.Web.dll
 C:\Users\ASUS\marothi-mohale\artifacts\ui-refresh-build\MarothiMohale.Portfolio.Web.pdb
+C:\Users\ASUS\marothi-mohale\artifacts\project-art-build\appsettings.Development.json
+C:\Users\ASUS\marothi-mohale\artifacts\project-art-build\appsettings.json
+C:\Users\ASUS\marothi-mohale\artifacts\project-art-build\appsettings.Production.json
+C:\Users\ASUS\marothi-mohale\artifacts\project-art-build\MarothiMohale.Portfolio.Web.staticwebassets.runtime.json
+C:\Users\ASUS\marothi-mohale\artifacts\project-art-build\MarothiMohale.Portfolio.Web.deps.json
+C:\Users\ASUS\marothi-mohale\artifacts\project-art-build\MarothiMohale.Portfolio.Web.runtimeconfig.json
+C:\Users\ASUS\marothi-mohale\artifacts\project-art-build\MarothiMohale.Portfolio.Web.dll
+C:\Users\ASUS\marothi-mohale\artifacts\project-art-build\MarothiMohale.Portfolio.Web.pdb
