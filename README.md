@@ -1,99 +1,146 @@
 # Marothi Mohale Portfolio
 
-Production-quality ASP.NET Core 8 portfolio application for Marothi Mohale with MVC, EF Core, SQLite, Identity, admin content management, Docker support, seeded portfolio content, and a polished recruiter-focused UI.
+A production-oriented personal portfolio web application built with ASP.NET Core 8, EF Core, SQLite, and Docker. The project presents Marothi Mohale as a software developer with strong C# / ASP.NET Core, full-stack web, and emerging data engineering capability, while also demonstrating secure admin tooling, resilient startup behavior, and maintainable architecture.
+
+## Project Overview
+
+This application combines a polished public-facing portfolio with a protected admin area for managing content such as projects, skills, services, profile details, testimonials, and contact messages.
+
+It is designed to be:
+
+- recruiter-friendly in presentation
+- practical to run locally or in Docker
+- easy to extend with new content and features
+- strong on fundamentals like validation, authentication, error handling, and operational safety
+
+## Tech Stack
+
+- C#
+- ASP.NET Core 8 MVC
+- ASP.NET Core Identity
+- Entity Framework Core 8
+- SQLite
+- Razor views
+- Custom CSS and lightweight JavaScript
+- Docker and Docker Compose
 
 ## Architecture Overview
 
-This solution uses **ASP.NET Core MVC** rather than Razor Pages as the primary app pattern because the product naturally splits into:
+The solution uses ASP.NET Core MVC as the primary application pattern, with Identity UI handling authentication flows through Razor Pages.
 
-- public marketing-style pages with controller-driven routing and SEO metadata
-- an authenticated admin area with multiple CRUD workflows
-- shared layout, view models, and route conventions that benefit from MVC separation
+High-level structure:
 
-Identity UI still runs through Razor Pages for account management, which keeps authentication secure without over-scaffolding.
+- public site controllers and views for the portfolio experience
+- admin area for protected content management workflows
+- EF Core for data access and code-first migrations
+- focused service layer for portfolio queries, contact handling, dashboard summaries, and health checks
+- middleware for exception handling and request logging
+- startup initializer for safe migration and idempotent seed execution
 
-Project structure:
+This keeps the codebase clean and practical without introducing unnecessary abstraction.
 
-- `MarothiMohale.Portfolio.Web/Data` for `ApplicationDbContext`, startup seeding, and EF Core migrations
-- `MarothiMohale.Portfolio.Web/Models` for the domain entities and `ApplicationUser`
-- `MarothiMohale.Portfolio.Web/Services` for portfolio queries, contact handling, dashboard data, and health checks
-- `MarothiMohale.Portfolio.Web/ViewModels` for public-page and dashboard shaping
-- `MarothiMohale.Portfolio.Web/Controllers` for public routes and error handling
-- `MarothiMohale.Portfolio.Web/Areas/Admin` for authenticated management workflows
-- `MarothiMohale.Portfolio.Web/Middleware` for global exception handling
-- `MarothiMohale.Portfolio.Web/wwwroot` for CSS, JavaScript, and seeded project artwork
+## Why ASP.NET Core, SQLite, and Docker
+
+### ASP.NET Core
+
+ASP.NET Core was chosen because it provides excellent performance, strong built-in security features, mature dependency injection, first-class Identity support, and a clean path for both server-rendered UI and admin workflows.
+
+### SQLite
+
+SQLite is a strong fit for this project because the application manages structured content with a relatively simple deployment model. It keeps local development friction low, works well with EF Core migrations, and is easy to persist safely in a Docker volume.
+
+### Docker
+
+Docker makes the application easy to run consistently across machines. The project includes a multi-stage Dockerfile, Docker Compose support, volume-backed SQLite persistence, and environment-variable configuration so the app can be started with a predictable one-command workflow.
 
 ## Features
 
-- Premium responsive landing page with hero, skills, services, featured projects, testimonials, experience timeline, and insights
-- Projects listing and project details pages backed by SQLite data
-- Contact form with server validation, antiforgery protection, and persistent message storage
-- Blog/insights structure ready for future editorial content
-- Admin area secured with ASP.NET Core Identity and role-based authorization
-- Seeded profile, skills, experiences, services, testimonials, social links, and six requested portfolio projects
-- Global exception middleware, custom 404/500 pages, structured logging defaults, and `/health` endpoint
-- Automatic database migration and seed execution on startup
+- premium responsive portfolio UI
+- featured and full projects sections
+- project detail pages
+- about, skills, services, testimonials, experience, and insights sections
+- contact form with validation and persistence
+- admin area with role-based protection
+- Projects, Skills, Services, Testimonials, and Profile management
+- contact message review in the admin area
+- global exception handling and custom error pages
+- health check endpoint
+- automatic migration and seed on startup
 
-## Local Run
+## Setup
 
-Requirements:
+### Prerequisites
 
 - .NET SDK 8.0+
+- Docker Desktop or compatible Docker runtime for container usage
 
-Commands:
+### Clone and Restore
 
 ```powershell
+git clone <repository-url>
+cd marothi-mohale
 dotnet restore .\MarothiMohale.Portfolio.Web\MarothiMohale.Portfolio.Web.csproj --configfile .\NuGet.Config
+```
+
+## Local Development
+
+Build the solution:
+
+```powershell
 dotnet build .\MarothiMohale.Portfolio.sln
+```
+
+Run the web application:
+
+```powershell
 dotnet run --project .\MarothiMohale.Portfolio.Web\MarothiMohale.Portfolio.Web.csproj
 ```
 
-App URLs:
+Typical local URLs:
 
 - `https://localhost:7235`
 - `http://localhost:5128`
 
-Seeded admin login:
+On startup, the application will:
 
-- Email: `admin@marothimohale.dev`
-- Password: `MarothiAdmin1`
+- apply EF Core migrations
+- create the SQLite database if needed
+- seed profile, projects, skills, services, testimonials, blog data, and admin access
 
-Admin sign-in URL:
+## EF Core Migrations
 
-- `/Identity/Account/Login`
+Create a new migration:
 
-How to change the seeded admin credentials:
+```powershell
+dotnet tool run dotnet-ef migrations add <MigrationName> --project .\MarothiMohale.Portfolio.Web\MarothiMohale.Portfolio.Web.csproj --startup-project .\MarothiMohale.Portfolio.Web\MarothiMohale.Portfolio.Web.csproj --output-dir Data\Migrations
+```
 
-1. Update the `AdminUser` section in `MarothiMohale.Portfolio.Web/appsettings.json`, or override with environment variables:
-   - `AdminUser__Email`
-   - `AdminUser__Password`
-2. Do this **before first run** if you want the first seeded account to use different credentials.
-3. If the admin user was already created, change the password through Identity or:
-   - update the config
-   - delete the existing SQLite database
-   - start the app again so the seeded admin user is recreated
+Apply migrations manually:
+
+```powershell
+dotnet tool run dotnet-ef database update --project .\MarothiMohale.Portfolio.Web\MarothiMohale.Portfolio.Web.csproj --startup-project .\MarothiMohale.Portfolio.Web\MarothiMohale.Portfolio.Web.csproj
+```
+
+In normal operation, manual migration is usually unnecessary because startup migration is built into the app.
 
 ## Docker
 
-Build and run everything with one command:
+Build and run with Docker Compose:
 
 ```powershell
 docker compose up --build
 ```
 
-The app is exposed on:
+The application is exposed on:
 
 - `http://localhost:8080`
 
-SQLite persistence is handled by the named Docker volume `portfolio-data`, mounted into `/app/data` inside the container.
+### Container Notes
 
-The container startup is designed for first-run safety:
-
-- the app starts in `Production`
-- EF Core migrations are applied automatically on startup
-- seed data runs idempotently after migrations
-- the SQLite file lives at `/app/data/portfolio.db`
-- data-protection keys live at `/app/data/app-state/Keys`, so admin cookies remain valid across container restarts
+- the app runs in `Production`
+- SQLite is stored in a mounted Docker volume
+- data-protection keys are also persisted so admin auth remains stable across restarts
+- migrations and seed data run automatically on first startup
 
 Useful Docker commands:
 
@@ -106,51 +153,62 @@ docker compose logs -f portfolio
 
 Persistence behavior:
 
-- `docker compose down` keeps the `portfolio-data` volume, so the database survives restarts
-- `docker compose down -v` removes the volume, which resets the database and causes migrations + seed data to run again on next startup
+- `docker compose down` keeps the database volume
+- `docker compose down -v` removes the volume and resets the database
 
-Environment variables supported by the container:
+## Default Admin Access
 
-- `ConnectionStrings__DefaultConnection`
-- `Portfolio__PersistentDataRootPath`
-- `Portfolio__StartupMigrationMaxRetries`
-- `Portfolio__StartupMigrationRetryDelaySeconds`
+Seeded administrator account:
+
+- Email: `admin@marothimohale.dev`
+- Password: `MarothiAdmin1`
+
+Admin login:
+
+- `/Identity/Account/Login`
+
+To change the seeded credentials before first run, update the `AdminUser` section in `MarothiMohale.Portfolio.Web/appsettings.json` or override with environment variables:
+
 - `AdminUser__Email`
 - `AdminUser__Password`
 
-Example override:
+If the admin user already exists, either change the password through Identity or recreate the database and start the app again.
 
-```powershell
-$env:AdminUser__Password = "ChangeMe123"
-docker compose up --build
+## Project Structure
+
+```text
+MarothiMohale.Portfolio.Web
+├── Areas/Admin              # Protected admin controllers and views
+├── Configuration            # Options and app configuration models
+├── Controllers              # Public site controllers
+├── Data                     # DbContext, seed initializer, migrations
+├── Middleware               # Exception handling and request logging
+├── Models                   # Domain entities and Identity user
+├── Services                 # Business logic and query services
+├── ViewModels               # UI-specific shaping models
+├── Views                    # Public MVC views and shared layout
+└── wwwroot                  # Static assets, styles, scripts, images
 ```
 
-## Migrations
+## Operational Highlights
 
-Create a new migration:
+- role-based admin authorization
+- antiforgery protection on form posts
+- server-side validation
+- request logging
+- graceful handling for missing content, images, and links
+- configuration-driven startup behavior
+- health endpoint at `/health`
 
-```powershell
-dotnet tool run dotnet-ef migrations add <MigrationName> --project .\MarothiMohale.Portfolio.Web\MarothiMohale.Portfolio.Web.csproj --startup-project .\MarothiMohale.Portfolio.Web\MarothiMohale.Portfolio.Web.csproj --output-dir Data\Migrations
-```
+## Future Improvements
 
-Apply migrations manually if needed:
+- richer blog publishing and editorial workflows
+- image upload and asset management from the admin area
+- automated tests for controllers, services, and admin flows
+- CI/CD pipeline for build, test, and container publish
+- optional PostgreSQL support for larger deployments
+- richer analytics or recruiter engagement tracking
 
-```powershell
-dotnet tool run dotnet-ef database update --project .\MarothiMohale.Portfolio.Web\MarothiMohale.Portfolio.Web.csproj --startup-project .\MarothiMohale.Portfolio.Web\MarothiMohale.Portfolio.Web.csproj
-```
+## Summary
 
-In normal operation, the app applies migrations and seed data automatically on startup.
-
-## Operational Notes
-
-- Contact messages are stored in SQLite for later review.
-- The admin area is restricted to the seeded `Administrator` role.
-- Admin management currently includes dashboard summary, Projects CRUD, Skills CRUD, Services CRUD, Testimonials CRUD, Profile editing, and contact message review.
-- The health endpoint is available at `/health`.
-- The theme toggle stores the user preference in local storage.
-
-## Assumptions
-
-- The requested six repositories to seed were the explicit list in the brief: `api design`, `levels_on_ice`, `nickys-manicure`, `secureHelpdesk`, `clinic-admin`, and `Perfect Tutorials`.
-- Because a specific GitHub profile URL was not provided, repository URLs were inferred using the `Marothi-Mohale` GitHub username format.
-- Testimonials were intentionally seeded as placeholders so the content model and admin workflow are ready without inventing fake client endorsements.
+This project is intentionally built to feel like more than a simple portfolio. It demonstrates product thinking, secure admin workflows, clean ASP.NET Core architecture, operational readiness, and a polished developer-facing presentation in one maintainable codebase.
