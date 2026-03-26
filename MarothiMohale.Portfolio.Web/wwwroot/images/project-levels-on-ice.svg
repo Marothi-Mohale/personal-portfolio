@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
+  <rect width="800" height="480" fill="#07121f"/>
+  <path d="M0 350 Q200 280 400 360 T800 330 V480 H0Z" fill="#8de2ff"/>
+  <rect x="90" y="90" width="620" height="210" rx="28" fill="#10253c"/>
+  <text x="120" y="195" fill="#ebf1ff" font-family="Arial" font-size="52" font-weight="700">levels_on_ice</text>
+  <text x="120" y="248" fill="#5ed0c3" font-family="Arial" font-size="24">Interaction design with crisp visual rhythm.</text>
+</svg>

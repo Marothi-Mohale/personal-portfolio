@@ -1,0 +1,18 @@
+@model Project
+<form method="post" class="form-grid admin-form">
+    <label>Title<input asp-for="Title" /><span asp-validation-for="Title"></span></label>
+    <label>Slug<input asp-for="Slug" /><span asp-validation-for="Slug"></span></label>
+    <label class="form-full">Short Description<textarea asp-for="ShortDescription" rows="3"></textarea><span asp-validation-for="ShortDescription"></span></label>
+    <label class="form-full">Full Description<textarea asp-for="FullDescription" rows="6"></textarea><span asp-validation-for="FullDescription"></span></label>
+    <label>Tech Stack<input asp-for="TechStack" /><span asp-validation-for="TechStack"></span></label>
+    <label>GitHub Url<input asp-for="GitHubUrl" /><span asp-validation-for="GitHubUrl"></span></label>
+    <label>Live Url<input asp-for="LiveUrl" /><span asp-validation-for="LiveUrl"></span></label>
+    <label>Image Url<input asp-for="ImageUrl" /><span asp-validation-for="ImageUrl"></span></label>
+    <label>Display Order<input asp-for="DisplayOrder" /><span asp-validation-for="DisplayOrder"></span></label>
+    <label class="checkbox-row"><input asp-for="IsFeatured" /> Featured project</label>
+    <input asp-for="Id" type="hidden" />
+    <input asp-for="CreatedAt" type="hidden" />
+    <button class="button button-primary" type="submit">Save</button>
+    <a class="button button-secondary" asp-action="Index">Cancel</a>
+</form>
+<partial name="_ValidationScriptsPartial" />

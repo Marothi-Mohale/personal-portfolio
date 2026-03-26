@@ -1,0 +1,43 @@
+@model ProjectsPageViewModel
+
+<section class="section page-header">
+    <div class="container">
+        <p class="eyebrow">Projects</p>
+        <h1>Selected software projects by @Model.Profile.FullName</h1>
+        <p class="lead">A curated body of work spanning APIs, full-stack experiences, operational systems, and educational products with a clear product-minded point of view.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container featured-projects-grid">
+        @foreach (var project in Model.Projects)
+        {
+            <article class="card project-card editorial-card reveal reveal-up">
+                <div class="project-card-media">
+                    <img src="@project.ImageUrl" alt="" class="project-image" />
+                    <div class="project-overlay">
+                        @if (project.IsFeatured)
+                        {
+                            <span class="badge badge-strong">Featured</span>
+                        }
+                        else
+                        {
+                            <span class="badge">Portfolio</span>
+                        }
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-topline">
+                        <h2>@project.Title</h2>
+                    </div>
+                    <p class="meta-line">@project.TechStack</p>
+                    <p>@project.ShortDescription</p>
+                    <div class="link-row">
+                        <a class="text-link" asp-controller="Projects" asp-action="Details" asp-route-slug="@project.Slug">Project details</a>
+                        <a class="text-link" href="@project.GitHubUrl" target="_blank" rel="noreferrer">GitHub</a>
+                    </div>
+                </div>
+            </article>
+        }
+    </div>
+</section>

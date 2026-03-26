@@ -1,0 +1,77 @@
+@inject MarothiMohale.Portfolio.Web.Services.IPortfolioService PortfolioService
+@{
+    var footerLinks = await PortfolioService.GetSocialLinksAsync();
+}
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <meta name="description" content="@(ViewData["MetaDescription"] ?? "Portfolio for Marothi Mohale, software developer.")" />
+    <meta name="theme-color" content="#0f1728" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MarothiMohale.Portfolio.Web.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="site-shell">
+        <header class="site-header">
+            <div class="container nav-shell">
+                <a class="brand" asp-controller="Home" asp-action="Index">
+                    <span class="brand-mark"></span>
+                    <span>Marothi Mohale</span>
+                </a>
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav id="site-nav" class="site-nav" aria-label="Primary">
+                    <a asp-controller="Home" asp-action="Index">Home</a>
+                    <a asp-controller="Projects" asp-action="Index">Projects</a>
+                    <a asp-controller="Blog" asp-action="Index">Insights</a>
+                    <a asp-controller="Contact" asp-action="Index">Contact</a>
+                    <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Admin</a>
+                    <partial name="_LoginPartial" />
+                    <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle color theme">Mode</button>
+                </nav>
+            </div>
+        </header>
+        <main>
+            @RenderBody()
+        </main>
+        <footer class="site-footer">
+            <div class="container footer-grid">
+                <div class="footer-brand-block">
+                    <p class="eyebrow">Marothi Mohale</p>
+                    <h2>Software Developer, C# / ASP.NET Core builder, full-stack web developer, and data engineering enthusiast.</h2>
+                    <p>Designed to feel deliberate, trustworthy, and product-ready for recruiters, hiring managers, and clients.</p>
+                </div>
+                <div class="footer-links-block">
+                    <div>
+                        <p class="footer-label">Navigation</p>
+                        <p><a asp-controller="Projects" asp-action="Index">Projects</a></p>
+                        <p><a asp-controller="Contact" asp-action="Index">Contact</a></p>
+                        <p><a asp-controller="Blog" asp-action="Index">Insights</a></p>
+                    </div>
+                    <div>
+                        <p class="footer-label">Connect</p>
+                        @foreach (var link in footerLinks)
+                        {
+                            <p><a href="@link.Url" target="_blank" rel="noreferrer">@link.Platform</a></p>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="container footer-bottom">
+                <p>Built with ASP.NET Core MVC, EF Core, SQLite, Identity, and Docker.</p>
+                <p><a asp-controller="Contact" asp-action="Index">Available for software development conversations</a></p>
+            </div>
+        </footer>
+    </div>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
+  <rect width="800" height="480" fill="#17161f"/>
+  <rect x="90" y="90" width="620" height="300" rx="28" fill="#29263a"/>
+  <rect x="145" y="150" width="210" height="18" rx="9" fill="#8de2ff"/>
+  <rect x="145" y="190" width="430" height="14" rx="7" fill="#d9d5ff"/>
+  <rect x="145" y="224" width="390" height="14" rx="7" fill="#d9d5ff"/>
+  <text x="145" y="315" fill="#f0edff" font-family="Arial" font-size="46" font-weight="700">Perfect Tutorials</text>
+</svg>

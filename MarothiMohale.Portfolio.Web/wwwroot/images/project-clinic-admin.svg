@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
+  <rect width="800" height="480" fill="#10251f"/>
+  <rect x="80" y="80" width="640" height="320" rx="32" fill="#16332c"/>
+  <path d="M390 145h20v60h60v20h-60v60h-20v-60h-60v-20h60z" fill="#76e4b3"/>
+  <text x="120" y="345" fill="#ecfff4" font-family="Arial" font-size="48" font-weight="700">clinic-admin</text>
+</svg>

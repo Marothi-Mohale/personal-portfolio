@@ -1,0 +1,13 @@
+@model Testimonial
+<form method="post" class="form-grid admin-form">
+    <label>Author Name<input asp-for="AuthorName" /><span asp-validation-for="AuthorName"></span></label>
+    <label>Author Role<input asp-for="AuthorRole" /><span asp-validation-for="AuthorRole"></span></label>
+    <label>Company<input asp-for="Company" /><span asp-validation-for="Company"></span></label>
+    <label>Display Order<input asp-for="DisplayOrder" /><span asp-validation-for="DisplayOrder"></span></label>
+    <label class="checkbox-row"><input asp-for="IsFeatured" /> Featured testimonial</label>
+    <label class="form-full">Quote<textarea asp-for="Quote" rows="4"></textarea><span asp-validation-for="Quote"></span></label>
+    <input asp-for="Id" type="hidden" />
+    <button class="button button-primary" type="submit">Save</button>
+    <a class="button button-secondary" asp-action="Index">Cancel</a>
+</form>
+<partial name="_ValidationScriptsPartial" />

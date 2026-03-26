@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
+  <rect width="800" height="480" fill="#0c1728"/>
+  <circle cx="640" cy="110" r="120" fill="#183b55"/>
+  <rect x="80" y="110" width="640" height="260" rx="24" fill="#12263d" stroke="#5ed0c3" stroke-width="2"/>
+  <text x="120" y="205" fill="#8de2ff" font-family="Arial" font-size="54" font-weight="700">api design</text>
+  <text x="120" y="260" fill="#ebf1ff" font-family="Arial" font-size="24">Clean contracts. Clear resources. Reliable validation.</text>
+</svg>

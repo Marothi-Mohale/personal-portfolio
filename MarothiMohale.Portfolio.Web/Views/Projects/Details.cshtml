@@ -1,0 +1,57 @@
+@model ProjectDetailsViewModel
+
+<section class="section page-header">
+    <div class="container">
+        <p class="eyebrow">Project Details</p>
+        <h1>@Model.Project.Title</h1>
+        <p class="lead">@Model.Project.ShortDescription</p>
+        <div class="link-row">
+            <a class="button button-primary" href="@Model.Project.GitHubUrl" target="_blank" rel="noreferrer">View GitHub</a>
+            @if (!string.IsNullOrWhiteSpace(Model.Project.LiveUrl))
+            {
+                <a class="button button-secondary" href="@Model.Project.LiveUrl" target="_blank" rel="noreferrer">Open live site</a>
+            }
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container two-column">
+        <article class="content-panel">
+            <img src="@Model.Project.ImageUrl" alt="" class="project-image detail-image" />
+            <p>@Model.Project.FullDescription</p>
+        </article>
+        <aside class="content-panel">
+            <h2>Stack</h2>
+            <p>@Model.Project.TechStack</p>
+            <h2>Updated</h2>
+            <p>@Model.Project.UpdatedAt.ToString("dd MMM yyyy")</p>
+            <h2>Connect</h2>
+            @foreach (var link in Model.SocialLinks)
+            {
+                <p><a href="@link.Url" target="_blank" rel="noreferrer">@link.Platform</a></p>
+            }
+        </aside>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container section-heading">
+        <div>
+            <p class="eyebrow">Related Work</p>
+            <h2>More portfolio projects</h2>
+        </div>
+    </div>
+    <div class="container card-grid">
+        @foreach (var project in Model.RelatedProjects)
+        {
+            <article class="card">
+                <div class="card-body">
+                    <h3>@project.Title</h3>
+                    <p>@project.ShortDescription</p>
+                    <a class="text-link" asp-controller="Projects" asp-action="Details" asp-route-slug="@project.Slug">View project</a>
+                </div>
+            </article>
+        }
+    </div>
+</section>

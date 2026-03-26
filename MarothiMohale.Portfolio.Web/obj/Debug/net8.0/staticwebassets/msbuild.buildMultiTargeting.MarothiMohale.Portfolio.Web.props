@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MarothiMohale.Portfolio.Web.props" />
+</Project>

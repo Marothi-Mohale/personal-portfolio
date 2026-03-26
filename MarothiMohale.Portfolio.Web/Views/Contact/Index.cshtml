@@ -1,0 +1,66 @@
+@model ContactPageViewModel
+
+<section class="section page-header">
+    <div class="container">
+        <p class="eyebrow">Contact</p>
+        <h1>Let’s talk about the next build.</h1>
+        <p class="lead">Reach out for web development, API delivery, data engineering solutions, or technical training.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container two-column">
+        <aside class="content-panel">
+            <h2>Contact details</h2>
+            <p><strong>Email:</strong> @Model.Profile.Email</p>
+            <p><strong>Phone:</strong> @Model.Profile.Phone</p>
+            <p><strong>Location:</strong> @Model.Profile.Location</p>
+            @foreach (var link in Model.SocialLinks)
+            {
+                <p><a href="@link.Url" target="_blank" rel="noreferrer">@link.Platform</a></p>
+            }
+        </aside>
+
+        <div class="card">
+            <div class="card-body">
+                @if (TempData["ContactSuccess"] is string success)
+                {
+                    <div class="flash-message">@success</div>
+                }
+                <form asp-action="Index" method="post" class="form-grid">
+                    <div asp-validation-summary="ModelOnly" class="validation-summary"></div>
+                    <label>
+                        Name
+                        <input asp-for="Form.Name" />
+                        <span asp-validation-for="Form.Name"></span>
+                    </label>
+                    <label>
+                        Email
+                        <input asp-for="Form.Email" />
+                        <span asp-validation-for="Form.Email"></span>
+                    </label>
+                    <label>
+                        Phone
+                        <input asp-for="Form.Phone" />
+                        <span asp-validation-for="Form.Phone"></span>
+                    </label>
+                    <label>
+                        Subject
+                        <input asp-for="Form.Subject" />
+                        <span asp-validation-for="Form.Subject"></span>
+                    </label>
+                    <label class="form-full">
+                        Message
+                        <textarea asp-for="Form.Message" rows="6"></textarea>
+                        <span asp-validation-for="Form.Message"></span>
+                    </label>
+                    <button type="submit" class="button button-primary">Send message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

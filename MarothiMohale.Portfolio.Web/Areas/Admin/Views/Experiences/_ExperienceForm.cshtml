@@ -1,0 +1,15 @@
+@model Experience
+<form method="post" class="form-grid admin-form">
+    <label>Title<input asp-for="Title" /><span asp-validation-for="Title"></span></label>
+    <label>Organisation<input asp-for="Organization" /><span asp-validation-for="Organization"></span></label>
+    <label>Location<input asp-for="Location" /><span asp-validation-for="Location"></span></label>
+    <label>Start Date<input asp-for="StartDate" type="date" /><span asp-validation-for="StartDate"></span></label>
+    <label>End Date<input asp-for="EndDate" type="date" /><span asp-validation-for="EndDate"></span></label>
+    <label>Display Order<input asp-for="DisplayOrder" /><span asp-validation-for="DisplayOrder"></span></label>
+    <label class="checkbox-row"><input asp-for="IsCurrent" /> Current role</label>
+    <label class="form-full">Summary<textarea asp-for="Summary" rows="4"></textarea><span asp-validation-for="Summary"></span></label>
+    <input asp-for="Id" type="hidden" />
+    <button class="button button-primary" type="submit">Save</button>
+    <a class="button button-secondary" asp-action="Index">Cancel</a>
+</form>
+<partial name="_ValidationScriptsPartial" />

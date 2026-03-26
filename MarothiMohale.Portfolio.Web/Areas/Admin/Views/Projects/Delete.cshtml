@@ -1,0 +1,7 @@
+@model Project
+<h1>Delete project</h1>
+<p>Are you sure you want to delete <strong>@Model.Title</strong>?</p>
+<form method="post">
+    <button class="button button-primary" type="submit">Delete</button>
+    <a class="button button-secondary" asp-action="Index">Cancel</a>
+</form>

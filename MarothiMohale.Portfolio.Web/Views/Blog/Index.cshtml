@@ -1,0 +1,25 @@
+@model BlogIndexViewModel
+
+<section class="section page-header">
+    <div class="container">
+        <p class="eyebrow">Insights</p>
+        <h1>Notes on thoughtful software delivery.</h1>
+        <p class="lead">Small posts on architecture, portfolio quality, and practical engineering trade-offs.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container card-grid">
+        @foreach (var post in Model.Posts)
+        {
+            <article class="card">
+                <div class="card-body">
+                    <p class="eyebrow">@post.PublishedAtUtc.ToString("dd MMM yyyy")</p>
+                    <h2>@post.Title</h2>
+                    <p>@post.Excerpt</p>
+                    <a class="text-link" asp-controller="Blog" asp-action="Details" asp-route-slug="@post.Slug">Read insight</a>
+                </div>
+            </article>
+        }
+    </div>
+</section>

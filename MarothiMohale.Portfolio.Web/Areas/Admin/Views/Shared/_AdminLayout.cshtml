@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Admin</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="admin-shell">
+        <aside class="admin-sidebar">
+            <a class="brand" asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Admin</a>
+            <nav class="admin-nav">
+                <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
+                <a asp-area="Admin" asp-controller="Projects" asp-action="Index">Projects</a>
+                <a asp-area="Admin" asp-controller="Skills" asp-action="Index">Skills</a>
+                <a asp-area="Admin" asp-controller="Experiences" asp-action="Index">Experiences</a>
+                <a asp-area="Admin" asp-controller="Testimonials" asp-action="Index">Testimonials</a>
+                <a asp-area="Admin" asp-controller="Profile" asp-action="Edit">Profile</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index">View site</a>
+            </nav>
+        </aside>
+        <main class="admin-main">
+            @if (TempData["AdminMessage"] is string message)
+            {
+                <div class="flash-message">@message</div>
+            }
+            @RenderBody()
+        </main>
+    </div>
+</body>
+</html>

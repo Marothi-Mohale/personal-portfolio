@@ -1,0 +1,24 @@
+@model BlogDetailsViewModel
+
+<section class="section page-header">
+    <div class="container">
+        <p class="eyebrow">@Model.Post.PublishedAtUtc.ToString("dd MMM yyyy")</p>
+        <h1>@Model.Post.Title</h1>
+        <p class="lead">@Model.Post.Excerpt</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container two-column">
+        <article class="content-panel prose-panel">
+            <p>@Model.Post.Content</p>
+        </article>
+        <aside class="content-panel">
+            <h2>Related reading</h2>
+            @foreach (var post in Model.RelatedPosts)
+            {
+                <p><a asp-controller="Blog" asp-action="Details" asp-route-slug="@post.Slug">@post.Title</a></p>
+            }
+        </aside>
+    </div>
+</section>

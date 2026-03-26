@@ -1,0 +1,11 @@
+@model IReadOnlyList<Experience>
+<div class="admin-toolbar"><h1>Experiences</h1><a class="button button-primary" asp-action="Create">Add experience</a></div>
+<table class="admin-table">
+    <thead><tr><th>Title</th><th>Organisation</th><th>Current</th><th></th></tr></thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.Title</td><td>@item.Organization</td><td>@item.IsCurrent</td><td><a asp-action="Edit" asp-route-id="@item.Id">Edit</a> <a asp-action="Delete" asp-route-id="@item.Id">Delete</a></td></tr>
+    }
+    </tbody>
+</table>

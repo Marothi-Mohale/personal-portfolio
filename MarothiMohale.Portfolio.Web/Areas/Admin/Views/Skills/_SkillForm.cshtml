@@ -1,0 +1,12 @@
+@model Skill
+<form method="post" class="form-grid admin-form">
+    <label>Name<input asp-for="Name" /><span asp-validation-for="Name"></span></label>
+    <label>Category<input asp-for="Category" /><span asp-validation-for="Category"></span></label>
+    <label>Proficiency<input asp-for="ProficiencyPercent" /><span asp-validation-for="ProficiencyPercent"></span></label>
+    <label>Display Order<input asp-for="DisplayOrder" /><span asp-validation-for="DisplayOrder"></span></label>
+    <label class="form-full">Summary<textarea asp-for="Summary" rows="4"></textarea><span asp-validation-for="Summary"></span></label>
+    <input asp-for="Id" type="hidden" />
+    <button class="button button-primary" type="submit">Save</button>
+    <a class="button button-secondary" asp-action="Index">Cancel</a>
+</form>
+<partial name="_ValidationScriptsPartial" />

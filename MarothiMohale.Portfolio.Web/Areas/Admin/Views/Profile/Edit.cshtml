@@ -1,0 +1,17 @@
+@model Profile
+<h1>Edit profile</h1>
+<form method="post" class="form-grid admin-form">
+    <label>Full Name<input asp-for="FullName" /><span asp-validation-for="FullName"></span></label>
+    <label>Headline<input asp-for="Headline" /><span asp-validation-for="Headline"></span></label>
+    <label>Email<input asp-for="Email" /><span asp-validation-for="Email"></span></label>
+    <label>Phone<input asp-for="Phone" /><span asp-validation-for="Phone"></span></label>
+    <label>Location<input asp-for="Location" /><span asp-validation-for="Location"></span></label>
+    <label>Resume Url<input asp-for="ResumeUrl" /><span asp-validation-for="ResumeUrl"></span></label>
+    <label>Primary CTA<input asp-for="HeroPrimaryCtaUrl" /><span asp-validation-for="HeroPrimaryCtaUrl"></span></label>
+    <label>Secondary CTA<input asp-for="HeroSecondaryCtaUrl" /><span asp-validation-for="HeroSecondaryCtaUrl"></span></label>
+    <label class="form-full">Professional Summary<textarea asp-for="ProfessionalSummary" rows="3"></textarea><span asp-validation-for="ProfessionalSummary"></span></label>
+    <label class="form-full">About<textarea asp-for="About" rows="6"></textarea><span asp-validation-for="About"></span></label>
+    <input asp-for="Id" type="hidden" />
+    <button class="button button-primary" type="submit">Save profile</button>
+</form>
+<partial name="_ValidationScriptsPartial" />

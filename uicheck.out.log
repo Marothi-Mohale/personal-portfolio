@@ -1,0 +1,917 @@
+info: MarothiMohale.Portfolio.Web[0]
+      Starting Marothi Mohale portfolio application
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[63]
+      User profile is available. Using 'C:\Users\ASUS\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+dbug: Microsoft.EntityFrameworkCore.Infrastructure[10401]
+      An 'IServiceProvider' was created for internal use by Entity Framework.
+dbug: Microsoft.EntityFrameworkCore.Model[10601]
+      The index {'UserId'} was not created on entity type 'IdentityUserRole<string>' as the properties are already covered by the index {'UserId', 'RoleId'}.
+dbug: Microsoft.EntityFrameworkCore.Model[10601]
+      The index {'UserId'} was not created on entity type 'IdentityUserToken<string>' as the properties are already covered by the index {'UserId', 'LoginProvider', 'Name'}.
+dbug: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 8.0.25 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:8.0.25' with options: CommandTimeout=10 
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20005]
+      Creating DbConnection.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20006]
+      Created DbConnection. (15ms).
+dbug: Microsoft.EntityFrameworkCore.Migrations[20400]
+      Migrating using database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20005]
+      Creating DbConnection.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20006]
+      Created DbConnection. (0ms).
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20007]
+      Disposing connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20008]
+      Disposed connection to database 'main' on server 'portfolio.db' (1ms).
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (3ms).
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20005]
+      Creating DbConnection.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20006]
+      Created DbConnection. (0ms).
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20007]
+      Disposing connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20008]
+      Disposed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+info: Microsoft.EntityFrameworkCore.Migrations[20405]
+      No migrations were applied. The database is already up to date.
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<IdentityRole>()
+          .FirstOrDefault(r => r.NormalizedName == __normalizedName_0)'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<IdentityRole>(
+          asyncEnumerable: new SingleQueryingEnumerable<IdentityRole>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.QueryExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: IdentityRole.Id (string) Required PK AfterSave:Throw, 0], [Property: IdentityRole.ConcurrencyStamp (string) Concurrency, 1], [Property: IdentityRole.Name (string) MaxLength(256), 2], [Property: IdentityRole.NormalizedName (string) Index MaxLength(256), 3] }
+                  SELECT TOP(1) a.Id, a.ConcurrencyStamp, a.Name, a.NormalizedName
+                  FROM AspNetRoles AS a
+                  WHERE a.NormalizedName == @__normalizedName_0), 
+              null, 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, IdentityRole>, 
+              MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+              False, 
+              False, 
+              True
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.ChangeTracking[10806]
+      Context 'ApplicationDbContext' started tracking 'IdentityRole' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<ApplicationUser>()
+          .SingleOrDefault(u => u.NormalizedEmail == __normalizedEmail_0)'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<ApplicationUser>(
+          asyncEnumerable: new SingleQueryingEnumerable<ApplicationUser>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.QueryExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: ApplicationUser.Id (string) Required PK AfterSave:Throw, 0], [Property: ApplicationUser.AccessFailedCount (int) Required, 1], [Property: ApplicationUser.ConcurrencyStamp (string) Concurrency, 2], [Property: ApplicationUser.DisplayName (string), 3], [Property: ApplicationUser.Email (string) MaxLength(256), 4], [Property: ApplicationUser.EmailConfirmed (bool) Required, 5], [Property: ApplicationUser.LockoutEnabled (bool) Required, 6], [Property: ApplicationUser.LockoutEnd (DateTimeOffset?), 7], [Property: ApplicationUser.NormalizedEmail (string) Index MaxLength(256), 8], [Property: ApplicationUser.NormalizedUserName (string) Index MaxLength(256), 9], [Property: ApplicationUser.PasswordHash (string), 10], [Property: ApplicationUser.PhoneNumber (string), 11], [Property: ApplicationUser.PhoneNumberConfirmed (bool) Required, 12], [Property: ApplicationUser.SecurityStamp (string), 13], [Property: ApplicationUser.TwoFactorEnabled (bool) Required, 14], [Property: ApplicationUser.UserName (string) MaxLength(256), 15] }
+                  SELECT TOP(2) a.Id, a.AccessFailedCount, a.ConcurrencyStamp, a.DisplayName, a.Email, a.EmailConfirmed, a.LockoutEnabled, a.LockoutEnd, a.NormalizedEmail, a.NormalizedUserName, a.PasswordHash, a.PhoneNumber, a.PhoneNumberConfirmed, a.SecurityStamp, a.TwoFactorEnabled, a.UserName
+                  FROM AspNetUsers AS a
+                  WHERE a.NormalizedEmail == @__normalizedEmail_0), 
+              null, 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, ApplicationUser>, 
+              MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+              False, 
+              False, 
+              True
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.ChangeTracking[10806]
+      Context 'ApplicationDbContext' started tracking 'ApplicationUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<IdentityRole>()
+          .SingleOrDefault(r => r.NormalizedName == __normalizedRoleName_0)'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<IdentityRole>(
+          asyncEnumerable: new SingleQueryingEnumerable<IdentityRole>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.QueryExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: IdentityRole.Id (string) Required PK AfterSave:Throw, 0], [Property: IdentityRole.ConcurrencyStamp (string) Concurrency, 1], [Property: IdentityRole.Name (string) MaxLength(256), 2], [Property: IdentityRole.NormalizedName (string) Index MaxLength(256), 3] }
+                  SELECT TOP(2) a.Id, a.ConcurrencyStamp, a.Name, a.NormalizedName
+                  FROM AspNetRoles AS a
+                  WHERE a.NormalizedName == @__normalizedRoleName_0), 
+              null, 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, IdentityRole>, 
+              MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+              False, 
+              False, 
+              True
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<IdentityUserRole<string>>()
+          .FirstOrDefault(e => EF.Property<string>(e, "UserId") == __p_0 && EF.Property<string>(e, "RoleId") == __p_1)'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<IdentityUserRole<string>>(
+          asyncEnumerable: new SingleQueryingEnumerable<IdentityUserRole<string>>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.QueryExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: IdentityUserRole<string>.UserId (string) Required PK FK AfterSave:Throw, 0], [Property: IdentityUserRole<string>.RoleId (string) Required PK FK Index AfterSave:Throw, 1] }
+                  SELECT TOP(1) a.UserId, a.RoleId
+                  FROM AspNetUserRoles AS a
+                  WHERE (a.UserId == @__p_0) && (a.RoleId == @__p_1)), 
+              null, 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, IdentityUserRole<string>>, 
+              MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+              False, 
+              False, 
+              True
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.ChangeTracking[10806]
+      Context 'ApplicationDbContext' started tracking 'IdentityUserRole' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<Profile>()
+          .Any()'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<bool>(
+          asyncEnumerable: new SingleQueryingEnumerable<bool>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.QueryExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> 0
+                  SELECT EXISTS (
+                      SELECT 1
+                      FROM Profiles AS p)), 
+              null, 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+              MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+              False, 
+              False, 
+              True
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<Project>()
+          .Any()'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<bool>(
+          asyncEnumerable: new SingleQueryingEnumerable<bool>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.QueryExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> 0
+                  SELECT EXISTS (
+                      SELECT 1
+                      FROM Projects AS p)), 
+              null, 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+              MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+              False, 
+              False, 
+              True
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<Skill>()
+          .Any()'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<bool>(
+          asyncEnumerable: new SingleQueryingEnumerable<bool>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.QueryExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> 0
+                  SELECT EXISTS (
+                      SELECT 1
+                      FROM Skills AS s)), 
+              null, 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+              MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+              False, 
+              False, 
+              True
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<Experience>()
+          .Any()'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<bool>(
+          asyncEnumerable: new SingleQueryingEnumerable<bool>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.QueryExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> 0
+                  SELECT EXISTS (
+                      SELECT 1
+                      FROM Experiences AS e)), 
+              null, 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+              MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+              False, 
+              False, 
+              True
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<Testimonial>()
+          .Any()'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<bool>(
+          asyncEnumerable: new SingleQueryingEnumerable<bool>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.QueryExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> 0
+                  SELECT EXISTS (
+                      SELECT 1
+                      FROM Testimonials AS t)), 
+              null, 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+              MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+              False, 
+              False, 
+              True
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<ServiceOffering>()
+          .Any()'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<bool>(
+          asyncEnumerable: new SingleQueryingEnumerable<bool>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.QueryExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> 0
+                  SELECT EXISTS (
+                      SELECT 1
+                      FROM Services AS s)), 
+              null, 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+              MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+              False, 
+              False, 
+              True
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<SocialLink>()
+          .Any()'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<bool>(
+          asyncEnumerable: new SingleQueryingEnumerable<bool>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.QueryExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> 0
+                  SELECT EXISTS (
+                      SELECT 1
+                      FROM SocialLinks AS s)), 
+              null, 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+              MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+              False, 
+              False, 
+              True
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<BlogPost>()
+          .Any()'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<bool>(
+          asyncEnumerable: new SingleQueryingEnumerable<bool>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.QueryExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> 0
+                  SELECT EXISTS (
+                      SELECT 1
+                      FROM BlogPosts AS b)), 
+              null, 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+              MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+              False, 
+              False, 
+              True
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Update[10004]
+      SaveChanges starting for 'ApplicationDbContext'.
+dbug: Microsoft.EntityFrameworkCore.ChangeTracking[10800]
+      DetectChanges starting for 'ApplicationDbContext'.
+dbug: Microsoft.EntityFrameworkCore.ChangeTracking[10801]
+      DetectChanges completed for 'ApplicationDbContext'.
+dbug: Microsoft.EntityFrameworkCore.Update[10005]
+      SaveChanges completed for 'ApplicationDbContext' with 0 entities written to the database.
+info: DatabaseInitialiser[0]
+      Portfolio seed data ensured
+dbug: Microsoft.EntityFrameworkCore.Infrastructure[10407]
+      'ApplicationDbContext' disposed.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20007]
+      Disposing connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20008]
+      Disposed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.Extensions.Hosting.Internal.Host[1]
+      Hosting starting
+fail: Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor[43]
+      An exception occurred while trying to decrypt the element.
+      System.Security.Cryptography.CryptographicException: Error occurred during a cryptographic operation.
+         at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapiCore(Byte* pbProtectedData, UInt32 cbProtectedData, Byte* pbOptionalEntropy, UInt32 cbOptionalEntropy)
+         at Microsoft.AspNetCore.DataProtection.Cng.DpapiSecretSerializerHelper.UnprotectWithDpapi(Byte[] protectedSecret)
+         at Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor.Decrypt(XElement encryptedElement)
+fail: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[24]
+      An exception occurred while processing the key element '<key id="0fe936ff-cab5-4546-bfb8-75d46af8187c" version="1" />'.
+      System.AggregateException: An error occurred while writing to logger(s). (Cannot open log for source '.NET Runtime'. You may not have write access.)
+       ---> System.InvalidOperationException: Cannot open log for source '.NET Runtime'. You may not have write access.
+       ---> System.ComponentModel.Win32Exception (5): Access is denied.
+         --- End of inner exception stack trace ---
+         at System.Diagnostics.EventLogInternal.OpenForWrite(String currentMachineName)
+         at System.Diagnostics.EventLogInternal.InternalWriteEvent(UInt32 eventID, UInt16 category, EventLogEntryType type, String[] strings, Byte[] rawData, String currentMachineName)
+         at System.Diagnostics.EventLogInternal.WriteEvent(EventInstance instance, Byte[] data, Object[] values)
+         at Microsoft.Extensions.Logging.EventLog.WindowsEventLog.WriteEntry(String message, EventLogEntryType type, Int32 eventID, Int16 category)
+         at Microsoft.Extensions.Logging.EventLog.EventLogLogger.WriteMessage(String message, EventLogEntryType eventLogEntryType, Int32 eventId)
+         at Microsoft.Extensions.Logging.EventLog.EventLogLogger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+         at Microsoft.Extensions.Logging.Logger.<Log>g__LoggerLog|14_0[TState](LogLevel logLevel, EventId eventId, ILogger logger, Exception exception, Func`3 formatter, List`1& exceptions, TState& state)
+         --- End of inner exception stack trace ---
+         at Microsoft.Extensions.Logging.Logger.ThrowLoggingError(List`1 exceptions)
+         at Microsoft.Extensions.Logging.Logger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+         at Microsoft.Extensions.Logging.LoggerMessage.<>c__DisplayClass8_0.<Define>g__Log|0(ILogger logger, Exception exception)
+         at Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor.Decrypt(XElement encryptedElement)
+         at Microsoft.AspNetCore.DataProtection.XmlEncryption.XmlEncryptionExtensions.DecryptElement(XElement element, IActivator activator)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.Microsoft.AspNetCore.DataProtection.KeyManagement.Internal.IInternalXmlKeyManager.DeserializeDescriptorFromKeyElement(XElement keyElement)
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver[12]
+      Key {0fe936ff-cab5-4546-bfb8-75d46af8187c} is ineligible to be the default key because its CreateEncryptor method failed.
+      System.AggregateException: An error occurred while writing to logger(s). (Cannot open log for source '.NET Runtime'. You may not have write access.)
+       ---> System.InvalidOperationException: Cannot open log for source '.NET Runtime'. You may not have write access.
+       ---> System.ComponentModel.Win32Exception (5): Access is denied.
+         --- End of inner exception stack trace ---
+         at System.Diagnostics.EventLogInternal.OpenForWrite(String currentMachineName)
+         at System.Diagnostics.EventLogInternal.InternalWriteEvent(UInt32 eventID, UInt16 category, EventLogEntryType type, String[] strings, Byte[] rawData, String currentMachineName)
+         at System.Diagnostics.EventLogInternal.WriteEvent(EventInstance instance, Byte[] data, Object[] values)
+         at Microsoft.Extensions.Logging.EventLog.WindowsEventLog.WriteEntry(String message, EventLogEntryType type, Int32 eventID, Int16 category)
+         at Microsoft.Extensions.Logging.EventLog.EventLogLogger.WriteMessage(String message, EventLogEntryType eventLogEntryType, Int32 eventId)
+         at Microsoft.Extensions.Logging.EventLog.EventLogLogger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+         at Microsoft.Extensions.Logging.Logger.<Log>g__LoggerLog|14_0[TState](LogLevel logLevel, EventId eventId, ILogger logger, Exception exception, Func`3 formatter, List`1& exceptions, TState& state)
+         --- End of inner exception stack trace ---
+         at Microsoft.Extensions.Logging.Logger.ThrowLoggingError(List`1 exceptions)
+         at Microsoft.Extensions.Logging.Logger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+         at Microsoft.Extensions.Logging.Logger`1.Microsoft.Extensions.Logging.ILogger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+         at Microsoft.Extensions.Logging.LoggerMessage.<>c__DisplayClass10_0`1.<Define>g__Log|0(ILogger logger, T1 arg1, Exception exception)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.WriteKeyDeserializationErrorToLog(Exception error, XElement keyElement)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager.Microsoft.AspNetCore.DataProtection.KeyManagement.Internal.IInternalXmlKeyManager.DeserializeDescriptorFromKeyElement(XElement keyElement)
+         at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+         at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+         at System.Lazy`1.CreateValue()
+         at Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.CngGcmAuthenticatedEncryptorFactory.CreateEncryptorInstance(IKey key)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyBase.CreateEncryptor()
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver.CanCreateAuthenticatedEncryptor(IKey key)
+fail: Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider[48]
+      An error occurred while reading the key ring.
+      System.AggregateException: An error occurred while writing to logger(s). (Cannot open log for source '.NET Runtime'. You may not have write access.)
+       ---> System.InvalidOperationException: Cannot open log for source '.NET Runtime'. You may not have write access.
+       ---> System.ComponentModel.Win32Exception (5): Access is denied.
+         --- End of inner exception stack trace ---
+         at System.Diagnostics.EventLogInternal.OpenForWrite(String currentMachineName)
+         at System.Diagnostics.EventLogInternal.InternalWriteEvent(UInt32 eventID, UInt16 category, EventLogEntryType type, String[] strings, Byte[] rawData, String currentMachineName)
+         at System.Diagnostics.EventLogInternal.WriteEvent(EventInstance instance, Byte[] data, Object[] values)
+         at Microsoft.Extensions.Logging.EventLog.WindowsEventLog.WriteEntry(String message, EventLogEntryType type, Int32 eventID, Int16 category)
+         at Microsoft.Extensions.Logging.EventLog.EventLogLogger.WriteMessage(String message, EventLogEntryType eventLogEntryType, Int32 eventId)
+         at Microsoft.Extensions.Logging.EventLog.EventLogLogger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+         at Microsoft.Extensions.Logging.Logger.<Log>g__LoggerLog|14_0[TState](LogLevel logLevel, EventId eventId, ILogger logger, Exception exception, Func`3 formatter, List`1& exceptions, TState& state)
+         --- End of inner exception stack trace ---
+         at Microsoft.Extensions.Logging.Logger.ThrowLoggingError(List`1 exceptions)
+         at Microsoft.Extensions.Logging.Logger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+         at Microsoft.Extensions.Logging.Logger`1.Microsoft.Extensions.Logging.ILogger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+         at Microsoft.Extensions.Logging.LoggerMessage.<>c__DisplayClass12_0`2.<Define>g__Log|0(ILogger logger, T1 arg1, T2 arg2, Exception exception)
+         at Microsoft.Extensions.Logging.LoggingExtensions.KeyIsIneligibleToBeTheDefaultKeyBecauseItsMethodFailed(ILogger logger, Guid keyId, String methodName, Exception exception)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver.CanCreateAuthenticatedEncryptor(IKey key)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver.FindDefaultKey(DateTimeOffset now, IEnumerable`1 allKeys, IKey& fallbackKey, Boolean& callerShouldGenerateNewKey)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.DefaultKeyResolver.ResolveDefaultKeyPolicy(DateTimeOffset now, IEnumerable`1 allKeys)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider.CreateCacheableKeyRingCore(DateTimeOffset now, IKey keyJustAdded)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider.GetCurrentKeyRingCore(DateTime utcNow, Boolean forceRefresh)
+info: Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService[66]
+      Key ring failed to load during application startup.
+      System.AggregateException: An error occurred while writing to logger(s). (Cannot open log for source '.NET Runtime'. You may not have write access.)
+       ---> System.InvalidOperationException: Cannot open log for source '.NET Runtime'. You may not have write access.
+       ---> System.ComponentModel.Win32Exception (5): Access is denied.
+         --- End of inner exception stack trace ---
+         at System.Diagnostics.EventLogInternal.OpenForWrite(String currentMachineName)
+         at System.Diagnostics.EventLogInternal.InternalWriteEvent(UInt32 eventID, UInt16 category, EventLogEntryType type, String[] strings, Byte[] rawData, String currentMachineName)
+         at System.Diagnostics.EventLogInternal.WriteEvent(EventInstance instance, Byte[] data, Object[] values)
+         at Microsoft.Extensions.Logging.EventLog.WindowsEventLog.WriteEntry(String message, EventLogEntryType type, Int32 eventID, Int16 category)
+         at Microsoft.Extensions.Logging.EventLog.EventLogLogger.WriteMessage(String message, EventLogEntryType eventLogEntryType, Int32 eventId)
+         at Microsoft.Extensions.Logging.EventLog.EventLogLogger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+         at Microsoft.Extensions.Logging.Logger.<Log>g__LoggerLog|14_0[TState](LogLevel logLevel, EventId eventId, ILogger logger, Exception exception, Func`3 formatter, List`1& exceptions, TState& state)
+         --- End of inner exception stack trace ---
+         at Microsoft.Extensions.Logging.Logger.ThrowLoggingError(List`1 exceptions)
+         at Microsoft.Extensions.Logging.Logger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+         at Microsoft.Extensions.Logging.Logger`1.Microsoft.Extensions.Logging.ILogger.Log[TState](LogLevel logLevel, EventId eventId, TState state, Exception exception, Func`3 formatter)
+         at Microsoft.Extensions.Logging.LoggerMessage.<>c__DisplayClass8_0.<Define>g__Log|0(ILogger logger, Exception exception)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingProvider.GetCurrentKeyRingCore(DateTime utcNow, Boolean forceRefresh)
+         at Microsoft.AspNetCore.DataProtection.Internal.DataProtectionHostedService.StartAsync(CancellationToken token)
+info: Microsoft.Hosting.Lifetime[14]
+      Now listening on: http://127.0.0.1:5181
+info: Microsoft.Hosting.Lifetime[0]
+      Application started. Press Ctrl+C to shut down.
+info: Microsoft.Hosting.Lifetime[0]
+      Hosting environment: Development
+info: Microsoft.Hosting.Lifetime[0]
+      Content root path: C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web
+dbug: Microsoft.Extensions.Hosting.Internal.Host[2]
+      Hosting started
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5181/ - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'MarothiMohale.Portfolio.Web.Controllers.HomeController.Index (MarothiMohale.Portfolio.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Index", controller = "Home", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Threading.CancellationToken) on controller MarothiMohale.Portfolio.Web.Controllers.HomeController (MarothiMohale.Portfolio.Web).
+dbug: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 8.0.25 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:8.0.25' with options: CommandTimeout=10 
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<Profile>()
+          .AsNoTracking()
+          .OrderBy(x => x.Id)
+          .First()'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<Profile>(
+          asyncEnumerable: new SingleQueryingEnumerable<Profile>(
+              (RelationalQueryContext)queryContext, 
+              RelationalCommandCache.QueryExpression(
+                  Projection Mapping:
+                      EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Profile.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Profile.About (string) Required, 1], [Property: Profile.Email (string) Required MaxLength(150), 2], [Property: Profile.FullName (string) Required MaxLength(150), 3], [Property: Profile.Headline (string) Required MaxLength(200), 4], [Property: Profile.HeroPrimaryCtaUrl (string) Required MaxLength(255), 5], [Property: Profile.HeroSecondaryCtaUrl (string) Required MaxLength(255), 6], [Property: Profile.Location (string) Required MaxLength(120), 7], [Property: Profile.Phone (string) Required MaxLength(30), 8], [Property: Profile.ProfessionalSummary (string) Required, 9], [Property: Profile.ResumeUrl (string) Required MaxLength(255), 10] }
+                  SELECT TOP(1) p.Id, p.About, p.Email, p.FullName, p.Headline, p.HeroPrimaryCtaUrl, p.HeroSecondaryCtaUrl, p.Location, p.Phone, p.ProfessionalSummary, p.ResumeUrl
+                  FROM Profiles AS p
+                  ORDER BY p.Id ASC), 
+              null, 
+              Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Profile>, 
+              MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+              False, 
+              False, 
+              True
+          ), 
+          cancellationToken: queryContext.CancellationToken)'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20005]
+      Creating DbConnection.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20006]
+      Created DbConnection. (0ms).
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<Project>()
+          .AsNoTracking()
+          .Where(x => x.IsFeatured)
+          .OrderBy(x => x.DisplayOrder)'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<Project>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.QueryExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Project.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Project.CreatedAt (DateTime) Required, 1], [Property: Project.DisplayOrder (int) Required, 2], [Property: Project.FullDescription (string) Required, 3], [Property: Project.GitHubUrl (string) Required MaxLength(255), 4], [Property: Project.ImageUrl (string) Required MaxLength(255), 5], [Property: Project.IsFeatured (bool) Required, 6], [Property: Project.LiveUrl (string) MaxLength(255), 7], [Property: Project.ShortDescription (string) Required MaxLength(320), 8], [Property: Project.Slug (string) Required Index MaxLength(160), 9], [Property: Project.TechStack (string) Required MaxLength(300), 10], [Property: Project.Title (string) Required MaxLength(150), 11], [Property: Project.UpdatedAt (DateTime) Required, 12] }
+              SELECT p.Id, p.CreatedAt, p.DisplayOrder, p.FullDescription, p.GitHubUrl, p.ImageUrl, p.IsFeatured, p.LiveUrl, p.ShortDescription, p.Slug, p.TechStack, p.Title, p.UpdatedAt
+              FROM Projects AS p
+              WHERE p.IsFeatured
+              ORDER BY p.DisplayOrder ASC), 
+          null, 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Project>, 
+          MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+          False, 
+          False, 
+          True
+      )'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<Skill>()
+          .AsNoTracking()
+          .OrderBy(x => x.Category)
+          .ThenByDescending(x => x.ProficiencyPercent)
+          .ThenBy(x => x.DisplayOrder)'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<Skill>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.QueryExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Skill.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Skill.Category (string) Required MaxLength(80), 1], [Property: Skill.DisplayOrder (int) Required, 2], [Property: Skill.Name (string) Required MaxLength(120), 3], [Property: Skill.ProficiencyPercent (int) Required, 4], [Property: Skill.Summary (string) Required, 5] }
+              SELECT s.Id, s.Category, s.DisplayOrder, s.Name, s.ProficiencyPercent, s.Summary
+              FROM Skills AS s
+              ORDER BY s.Category ASC, s.ProficiencyPercent DESC, s.DisplayOrder ASC), 
+          null, 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Skill>, 
+          MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+          False, 
+          False, 
+          True
+      )'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<Experience>()
+          .AsNoTracking()
+          .OrderBy(x => x.DisplayOrder)'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<Experience>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.QueryExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Experience.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Experience.DisplayOrder (int) Required, 1], [Property: Experience.EndDate (DateTime?), 2], [Property: Experience.IsCurrent (bool) Required, 3], [Property: Experience.Location (string) Required MaxLength(120), 4], [Property: Experience.Organization (string) Required MaxLength(150), 5], [Property: Experience.StartDate (DateTime) Required, 6], [Property: Experience.Summary (string) Required, 7], [Property: Experience.Title (string) Required MaxLength(150), 8] }
+              SELECT e.Id, e.DisplayOrder, e.EndDate, e.IsCurrent, e.Location, e.Organization, e.StartDate, e.Summary, e.Title
+              FROM Experiences AS e
+              ORDER BY e.DisplayOrder ASC), 
+          null, 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Experience>, 
+          MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+          False, 
+          False, 
+          True
+      )'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<ServiceOffering>()
+          .AsNoTracking()
+          .OrderBy(x => x.DisplayOrder)'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<ServiceOffering>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.QueryExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: ServiceOffering.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: ServiceOffering.Description (string) Required, 1], [Property: ServiceOffering.DisplayOrder (int) Required, 2], [Property: ServiceOffering.Title (string) Required MaxLength(140), 3] }
+              SELECT s.Id, s.Description, s.DisplayOrder, s.Title
+              FROM Services AS s
+              ORDER BY s.DisplayOrder ASC), 
+          null, 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, ServiceOffering>, 
+          MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+          False, 
+          False, 
+          True
+      )'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<Testimonial>()
+          .AsNoTracking()
+          .Where(x => x.IsFeatured)
+          .OrderBy(x => x.DisplayOrder)'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<Testimonial>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.QueryExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Testimonial.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Testimonial.AuthorName (string) Required MaxLength(120), 1], [Property: Testimonial.AuthorRole (string) Required MaxLength(160), 2], [Property: Testimonial.Company (string) Required MaxLength(160), 3], [Property: Testimonial.DisplayOrder (int) Required, 4], [Property: Testimonial.IsFeatured (bool) Required, 5], [Property: Testimonial.Quote (string) Required, 6] }
+              SELECT t.Id, t.AuthorName, t.AuthorRole, t.Company, t.DisplayOrder, t.IsFeatured, t.Quote
+              FROM Testimonials AS t
+              WHERE t.IsFeatured
+              ORDER BY t.DisplayOrder ASC), 
+          null, 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Testimonial>, 
+          MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+          False, 
+          False, 
+          True
+      )'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<BlogPost>()
+          .AsNoTracking()
+          .Where(x => x.IsPublished)
+          .OrderByDescending(x => x.PublishedAtUtc)
+          .Take(__p_0)'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<BlogPost>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.QueryExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: BlogPost.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: BlogPost.Content (string) Required, 1], [Property: BlogPost.Excerpt (string) Required MaxLength(320), 2], [Property: BlogPost.IsPublished (bool) Required, 3], [Property: BlogPost.PublishedAtUtc (DateTime) Required, 4], [Property: BlogPost.Slug (string) Required Index MaxLength(180), 5], [Property: BlogPost.Title (string) Required MaxLength(180), 6] }
+              SELECT TOP(@__p_0) b.Id, b.Content, b.Excerpt, b.IsPublished, b.PublishedAtUtc, b.Slug, b.Title
+              FROM BlogPosts AS b
+              WHERE b.IsPublished
+              ORDER BY b.PublishedAtUtc DESC), 
+          null, 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, BlogPost>, 
+          MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+          False, 
+          False, 
+          True
+      )'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<SocialLink>()
+          .AsNoTracking()
+          .OrderBy(x => x.DisplayOrder)'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<SocialLink>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.QueryExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: SocialLink.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: SocialLink.DisplayOrder (int) Required, 1], [Property: SocialLink.Platform (string) Required MaxLength(50), 2], [Property: SocialLink.Url (string) Required MaxLength(255), 3] }
+              SELECT s.Id, s.DisplayOrder, s.Platform, s.Url
+              FROM SocialLinks AS s
+              ORDER BY s.DisplayOrder ASC), 
+          null, 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, SocialLink>, 
+          MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+          False, 
+          False, 
+          True
+      )'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Index.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Index executed in 204.1145ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action MarothiMohale.Portfolio.Web.Controllers.HomeController.Index (MarothiMohale.Portfolio.Web) in 681.0606ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'MarothiMohale.Portfolio.Web.Controllers.HomeController.Index (MarothiMohale.Portfolio.Web)'
+dbug: Microsoft.EntityFrameworkCore.Infrastructure[10407]
+      'ApplicationDbContext' disposed.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20007]
+      Disposing connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20008]
+      Disposed connection to database 'main' on server 'portfolio.db' (0ms).
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5181/ - 200 - text/html;+charset=utf-8 997.8579ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://127.0.0.1:5181/projects - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'MarothiMohale.Portfolio.Web.Controllers.ProjectsController.Index (MarothiMohale.Portfolio.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Index", controller = "Projects", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Threading.CancellationToken) on controller MarothiMohale.Portfolio.Web.Controllers.ProjectsController (MarothiMohale.Portfolio.Web).
+dbug: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 8.0.25 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:8.0.25' with options: CommandTimeout=10 
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20005]
+      Creating DbConnection.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20006]
+      Created DbConnection. (0ms).
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Query[10111]
+      Compiling query expression: 
+      'DbSet<Project>()
+          .AsNoTracking()
+          .OrderBy(x => x.DisplayOrder)
+          .ThenByDescending(x => x.CreatedAt)'
+dbug: Microsoft.EntityFrameworkCore.Query[10107]
+      Generated query execution expression: 
+      'queryContext => new SingleQueryingEnumerable<Project>(
+          (RelationalQueryContext)queryContext, 
+          RelationalCommandCache.QueryExpression(
+              Projection Mapping:
+                  EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Project.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Project.CreatedAt (DateTime) Required, 1], [Property: Project.DisplayOrder (int) Required, 2], [Property: Project.FullDescription (string) Required, 3], [Property: Project.GitHubUrl (string) Required MaxLength(255), 4], [Property: Project.ImageUrl (string) Required MaxLength(255), 5], [Property: Project.IsFeatured (bool) Required, 6], [Property: Project.LiveUrl (string) MaxLength(255), 7], [Property: Project.ShortDescription (string) Required MaxLength(320), 8], [Property: Project.Slug (string) Required Index MaxLength(160), 9], [Property: Project.TechStack (string) Required MaxLength(300), 10], [Property: Project.Title (string) Required MaxLength(150), 11], [Property: Project.UpdatedAt (DateTime) Required, 12] }
+              SELECT p.Id, p.CreatedAt, p.DisplayOrder, p.FullDescription, p.GitHubUrl, p.ImageUrl, p.IsFeatured, p.LiveUrl, p.ShortDescription, p.Slug, p.TechStack, p.Title, p.UpdatedAt
+              FROM Projects AS p
+              ORDER BY p.DisplayOrder ASC, p.CreatedAt DESC), 
+          null, 
+          Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Project>, 
+          MarothiMohale.Portfolio.Web.Data.ApplicationDbContext, 
+          False, 
+          False, 
+          True
+      )'
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Index.
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Index executed in 23.219ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action MarothiMohale.Portfolio.Web.Controllers.ProjectsController.Index (MarothiMohale.Portfolio.Web) in 144.2268ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'MarothiMohale.Portfolio.Web.Controllers.ProjectsController.Index (MarothiMohale.Portfolio.Web)'
+dbug: Microsoft.EntityFrameworkCore.Infrastructure[10407]
+      'ApplicationDbContext' disposed.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20007]
+      Disposing connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20008]
+      Disposed connection to database 'main' on server 'portfolio.db' (0ms).
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://127.0.0.1:5181/projects - 200 - text/html;+charset=utf-8 159.4396ms
