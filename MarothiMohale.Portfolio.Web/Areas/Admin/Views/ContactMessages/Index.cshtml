@@ -1,0 +1,17 @@
+@model IReadOnlyList<ContactMessage>
+<div class="admin-toolbar"><h1>Contact messages</h1><span class="badge">@Model.Count messages</span></div>
+<table class="admin-table">
+    <thead><tr><th>Sender</th><th>Subject</th><th>Received</th><th>Status</th><th></th></tr></thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name<br /><small>@item.Email</small></td>
+            <td>@item.Subject</td>
+            <td>@item.SubmittedAtUtc.ToString("dd MMM yyyy HH:mm")</td>
+            <td>@(item.IsReviewed ? "Reviewed" : "New")</td>
+            <td><a asp-action="Details" asp-route-id="@item.Id">Open</a></td>
+        </tr>
+    }
+    </tbody>
+</table>

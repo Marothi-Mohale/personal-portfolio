@@ -3,6 +3,7 @@ using MarothiMohale.Portfolio.Web.Data;
 using MarothiMohale.Portfolio.Web.Middleware;
 using MarothiMohale.Portfolio.Web.Models;
 using MarothiMohale.Portfolio.Web.Services;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +12,21 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
     ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+var appDataRoot = Path.Combine(builder.Environment.ContentRootPath, "App_Data");
+var dataProtectionPath = Path.Combine(appDataRoot, "Keys");
+
+Directory.CreateDirectory(dataProtectionPath);
+Environment.SetEnvironmentVariable("LOCALAPPDATA", appDataRoot);
+Environment.SetEnvironmentVariable("APPDATA", appDataRoot);
+
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
+builder.Logging.AddDebug();
+
+builder.Services
+    .AddDataProtection()
+    .PersistKeysToFileSystem(new DirectoryInfo(dataProtectionPath))
+    .SetApplicationName("MarothiMohale.Portfolio");
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(connectionString, sqliteOptions => sqliteOptions.CommandTimeout(10)));

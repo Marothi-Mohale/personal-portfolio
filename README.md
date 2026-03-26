@@ -58,6 +58,21 @@ Seeded admin login:
 - Email: `admin@marothimohale.dev`
 - Password: `MarothiAdmin1`
 
+Admin sign-in URL:
+
+- `/Identity/Account/Login`
+
+How to change the seeded admin credentials:
+
+1. Update the `AdminUser` section in `MarothiMohale.Portfolio.Web/appsettings.json`, or override with environment variables:
+   - `AdminUser__Email`
+   - `AdminUser__Password`
+2. Do this **before first run** if you want the first seeded account to use different credentials.
+3. If the admin user was already created, change the password through Identity or:
+   - update the config
+   - delete the existing SQLite database
+   - start the app again so the seeded admin user is recreated
+
 ## Docker
 
 Build and run everything with one command:
@@ -92,6 +107,7 @@ In normal operation, the app applies migrations and seed data automatically on s
 
 - Contact messages are stored in SQLite for later review.
 - The admin area is restricted to the seeded `Administrator` role.
+- Admin management currently includes dashboard summary, Projects CRUD, Skills CRUD, Services CRUD, Testimonials CRUD, Profile editing, and contact message review.
 - The health endpoint is available at `/health`.
 - The theme toggle stores the user preference in local storage.
 

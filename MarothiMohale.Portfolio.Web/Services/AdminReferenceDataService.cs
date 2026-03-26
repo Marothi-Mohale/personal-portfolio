@@ -19,6 +19,7 @@ public class AdminReferenceDataService : IAdminReferenceDataService
         {
             ProjectsCount = await _dbContext.Projects.CountAsync(cancellationToken),
             SkillsCount = await _dbContext.Skills.CountAsync(cancellationToken),
+            ServicesCount = await _dbContext.Services.CountAsync(cancellationToken),
             ExperiencesCount = await _dbContext.Experiences.CountAsync(cancellationToken),
             TestimonialsCount = await _dbContext.Testimonials.CountAsync(cancellationToken),
             ContactMessagesCount = await _dbContext.ContactMessages.CountAsync(cancellationToken)

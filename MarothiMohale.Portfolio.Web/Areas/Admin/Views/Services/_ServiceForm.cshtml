@@ -1,0 +1,11 @@
+@model ServiceOffering
+<form method="post" class="form-grid admin-form">
+    <div asp-validation-summary="ModelOnly" class="validation-summary form-full"></div>
+    <label>Title<input asp-for="Title" /><span asp-validation-for="Title"></span></label>
+    <label>Display Order<input asp-for="DisplayOrder" /><span asp-validation-for="DisplayOrder"></span></label>
+    <label class="form-full">Description<textarea asp-for="Description" rows="5"></textarea><span asp-validation-for="Description"></span></label>
+    <input asp-for="Id" type="hidden" />
+    <button class="button button-primary" type="submit">Save</button>
+    <a class="button button-secondary" asp-action="Index">Cancel</a>
+</form>
+<partial name="_ValidationScriptsPartial" />

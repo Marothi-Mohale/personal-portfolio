@@ -1,0 +1,17 @@
+@model ContactMessage
+<div class="admin-toolbar">
+    <h1>Contact message</h1>
+    <a class="button button-secondary" asp-action="Index">Back to inbox</a>
+</div>
+<article class="content-panel">
+    <p><strong>From:</strong> @Model.Name</p>
+    <p><strong>Email:</strong> <a href="mailto:@Model.Email">@Model.Email</a></p>
+    @if (!string.IsNullOrWhiteSpace(Model.Phone))
+    {
+        <p><strong>Phone:</strong> @Model.Phone</p>
+    }
+    <p><strong>Subject:</strong> @Model.Subject</p>
+    <p><strong>Received:</strong> @Model.SubmittedAtUtc.ToString("dd MMM yyyy HH:mm")</p>
+    <hr />
+    <p>@Model.Message</p>
+</article>
