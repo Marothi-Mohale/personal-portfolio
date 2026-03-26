@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "T49o8h04VXp50OgcP7W02ENq+gJv9xeEgIjzVUQccIo=",
+  "Hash": "4Zk1n3vF2gACGnwBspxObq+BcieVjWj7pmyymcVHcTU=",
   "Source": "MarothiMohale.Portfolio.Web",
   "BasePath": "_content/MarothiMohale.Portfolio.Web",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\ASUS\\marothi-mohale\\MarothiMohale.Portfolio.Web\\wwwroot\\images\\hero-background.jpg",
+      "SourceId": "MarothiMohale.Portfolio.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\marothi-mohale\\MarothiMohale.Portfolio.Web\\wwwroot\\",
+      "BasePath": "_content/MarothiMohale.Portfolio.Web",
+      "RelativePath": "images/hero-background.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\hero-background.jpg"
     },
     {
       "Identity": "C:\\Users\\ASUS\\marothi-mohale\\MarothiMohale.Portfolio.Web\\wwwroot\\images\\marothi-profile.jfif",

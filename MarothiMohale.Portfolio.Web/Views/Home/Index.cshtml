@@ -1,6 +1,9 @@
 @model HomePageViewModel
 
 <section class="hero-section">
+    <div class="hero-backdrop" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
     <div class="container hero-grid">
         <div class="hero-copy reveal reveal-up">
             <p class="eyebrow">Software Developer</p>
@@ -22,10 +25,14 @@
             </ul>
         </div>
         <div class="hero-stack reveal reveal-up-delayed">
-            <div class="hero-panel hero-profile-card">
-                <p class="eyebrow">Positioning</p>
-                <div class="hero-portrait-shell">
-                    <img src="~/images/marothi-profile.jfif" asp-append-version="true" alt="Portrait of Marothi Mohale" class="hero-portrait" data-fallback-image="/images/project-custom.svg" />
+            <div class="hero-panel hero-profile-card hero-profile-card-float">
+                <div class="hero-profile-intro">
+                    <p class="eyebrow">Positioning</p>
+                    <span class="hero-availability">Open to software opportunities</span>
+                </div>
+                <div class="hero-portrait-shell circular-portrait-shell">
+                    <div class="hero-portrait-ring"></div>
+                    <img src="~/images/marothi-profile.jfif" asp-append-version="true" alt="Portrait of Marothi Mohale" class="hero-portrait circular-portrait" data-fallback-image="/images/project-custom.svg" />
                 </div>
                 <h2>@Model.Profile.FullName</h2>
                 <p>@Model.Profile.About</p>
@@ -36,7 +43,7 @@
                     <span class="badge">BSc Computer Science and Business Computing</span>
                 </div>
             </div>
-            <div class="hero-proof-grid">
+            <div class="hero-proof-grid hero-proof-grid-creative">
                 <article class="proof-card">
                     <p class="proof-label">Core focus</p>
                     <strong>Business-ready web systems</strong>
