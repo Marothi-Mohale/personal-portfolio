@@ -85,7 +85,45 @@ The app is exposed on:
 
 - `http://localhost:8080`
 
-SQLite persistence is handled by the named Docker volume `portfolio-data`.
+SQLite persistence is handled by the named Docker volume `portfolio-data`, mounted into `/app/data` inside the container.
+
+The container startup is designed for first-run safety:
+
+- the app starts in `Production`
+- EF Core migrations are applied automatically on startup
+- seed data runs idempotently after migrations
+- the SQLite file lives at `/app/data/portfolio.db`
+- data-protection keys live at `/app/data/app-state/Keys`, so admin cookies remain valid across container restarts
+
+Useful Docker commands:
+
+```powershell
+docker compose up --build
+docker compose down
+docker compose down -v
+docker compose logs -f portfolio
+```
+
+Persistence behavior:
+
+- `docker compose down` keeps the `portfolio-data` volume, so the database survives restarts
+- `docker compose down -v` removes the volume, which resets the database and causes migrations + seed data to run again on next startup
+
+Environment variables supported by the container:
+
+- `ConnectionStrings__DefaultConnection`
+- `Portfolio__PersistentDataRootPath`
+- `Portfolio__StartupMigrationMaxRetries`
+- `Portfolio__StartupMigrationRetryDelaySeconds`
+- `AdminUser__Email`
+- `AdminUser__Password`
+
+Example override:
+
+```powershell
+$env:AdminUser__Password = "ChangeMe123"
+docker compose up --build
+```
 
 ## Migrations
 

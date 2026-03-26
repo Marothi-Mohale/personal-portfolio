@@ -11,11 +11,24 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
-    ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
-var appDataRoot = Path.Combine(builder.Environment.ContentRootPath, "App_Data");
+var configuredDataRoot = builder.Configuration[$"{PortfolioOptions.SectionName}:PersistentDataRootPath"];
+var appDataRoot = Path.GetFullPath(string.IsNullOrWhiteSpace(configuredDataRoot)
+    ? Path.Combine(builder.Environment.ContentRootPath, "App_Data")
+    : configuredDataRoot);
 var dataProtectionPath = Path.Combine(appDataRoot, "Keys");
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
+if (string.IsNullOrWhiteSpace(connectionString) && builder.Environment.IsProduction() && Environment.GetEnvironmentVariable("DOTNET_RUNNING_IN_CONTAINER") == "true")
+{
+    connectionString = "Data Source=/app/data/portfolio.db;Cache=Shared";
+}
+
+if (string.IsNullOrWhiteSpace(connectionString))
+{
+    throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+}
+
+Directory.CreateDirectory(appDataRoot);
 Directory.CreateDirectory(dataProtectionPath);
 Environment.SetEnvironmentVariable("LOCALAPPDATA", appDataRoot);
 Environment.SetEnvironmentVariable("APPDATA", appDataRoot);

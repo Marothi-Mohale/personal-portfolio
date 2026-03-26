@@ -147,3 +147,4 @@ C:\Users\ASUS\marothi-mohale\artifacts\hardening-build\MarothiMohale.Portfolio.W
 C:\Users\ASUS\marothi-mohale\artifacts\hardening-build\MarothiMohale.Portfolio.Web.runtimeconfig.json
 C:\Users\ASUS\marothi-mohale\artifacts\hardening-build\MarothiMohale.Portfolio.Web.dll
 C:\Users\ASUS\marothi-mohale\artifacts\hardening-build\MarothiMohale.Portfolio.Web.pdb
+C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\bin\Debug\net8.0\MarothiMohale.Portfolio.Web.exe

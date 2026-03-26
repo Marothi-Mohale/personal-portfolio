@@ -13,14 +13,18 @@ RUN dotnet publish MarothiMohale.Portfolio.Web/MarothiMohale.Portfolio.Web.cspro
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 
-RUN mkdir /app/data
+RUN mkdir -p /app/data /app/data/app-state && chown -R $APP_UID /app
 
 COPY --from=build /app/publish .
 
 ENV ASPNETCORE_URLS=http://+:8080
 ENV ASPNETCORE_ENVIRONMENT=Production
-ENV ConnectionStrings__DefaultConnection="Data Source=/app/data/portfolio.db;Cache=Shared"
+ENV Portfolio__PersistentDataRootPath=/app/data/app-state
+
+VOLUME ["/app/data"]
 
 EXPOSE 8080
+
+USER $APP_UID
 
 ENTRYPOINT ["dotnet", "MarothiMohale.Portfolio.Web.dll"]

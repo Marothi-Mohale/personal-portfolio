@@ -4,11 +4,16 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: marothi-portfolio
+    init: true
+    restart: unless-stopped
     ports:
       - "8080:8080"
     environment:
       ASPNETCORE_ENVIRONMENT: Production
       ConnectionStrings__DefaultConnection: "Data Source=/app/data/portfolio.db;Cache=Shared"
+      Portfolio__PersistentDataRootPath: /app/data/app-state
+      Portfolio__StartupMigrationMaxRetries: "5"
+      Portfolio__StartupMigrationRetryDelaySeconds: "3"
       AdminUser__Email: "admin@marothimohale.dev"
       AdminUser__Password: "MarothiAdmin1"
     volumes:
