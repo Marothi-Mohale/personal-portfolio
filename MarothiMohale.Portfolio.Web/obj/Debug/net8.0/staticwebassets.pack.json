@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\ASUS\\marothi-mohale\\MarothiMohale.Portfolio.Web\\wwwroot\\images\\marothi-profile.jfif",
+      "PackagePath": "staticwebassets\\images\\marothi-profile.jfif"
+    },
+    {
       "Id": "C:\\Users\\ASUS\\marothi-mohale\\MarothiMohale.Portfolio.Web\\wwwroot\\images\\project-api-design.svg",
       "PackagePath": "staticwebassets\\images\\project-api-design.svg"
     },

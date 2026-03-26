@@ -11,7 +11,6 @@ C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\bin\Debug\net8.0\appset
 C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\bin\Debug\net8.0\appsettings.json
 C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\bin\Debug\net8.0\appsettings.Production.json
 C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\bin\Debug\net8.0\MarothiMohale.Portfolio.Web.staticwebassets.runtime.json
-C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\bin\Debug\net8.0\MarothiMohale.Portfolio.Web.exe
 C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\bin\Debug\net8.0\MarothiMohale.Portfolio.Web.deps.json
 C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\bin\Debug\net8.0\MarothiMohale.Portfolio.Web.runtimeconfig.json
 C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\bin\Debug\net8.0\MarothiMohale.Portfolio.Web.dll

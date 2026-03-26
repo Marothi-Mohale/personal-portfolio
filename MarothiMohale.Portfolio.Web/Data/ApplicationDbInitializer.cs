@@ -62,22 +62,23 @@ public static class ApplicationDbInitializer
 
     private static async Task SeedPortfolioAsync(ApplicationDbContext context, ILogger logger)
     {
-        if (!await context.Profiles.AnyAsync())
+        var profile = await context.Profiles.OrderBy(x => x.Id).FirstOrDefaultAsync();
+        if (profile is null)
         {
-            context.Profiles.Add(new Profile
-            {
-                FullName = "Marothi Mohale",
-                Headline = "Software Developer building dependable .NET, web, and data solutions.",
-                ProfessionalSummary = "I design and ship business-focused software with clean APIs, practical front ends, resilient backend services, and an eye for data-driven decision making.",
-                About = "Marothi Mohale is a software developer with a strong C# and ASP.NET Core foundation, hands-on web delivery experience, and growing depth in data engineering. This portfolio helps recruiters and clients assess product thinking, technical execution, and the ability to deliver polished software end to end.",
-                Email = "hello@marothimohale.dev",
-                Phone = "+27 00 000 0000",
-                Location = "South Africa",
-                ResumeUrl = "#resume",
-                HeroPrimaryCtaUrl = "/Projects",
-                HeroSecondaryCtaUrl = "/Contact"
-            });
+            profile = new Profile();
+            context.Profiles.Add(profile);
         }
+
+        profile.FullName = "Marothi Mohale";
+        profile.Headline = "Software Developer, C# / ASP.NET Core builder, full-stack web developer, and data engineering enthusiast.";
+        profile.ProfessionalSummary = "I build dependable .NET and web solutions with strong product thinking, practical UI craftsmanship, and a growing passion for data engineering and analytics-driven systems.";
+        profile.About = "I am Marothi Mohale, a software developer with a BSc in Computer Science and Business Computing. My work sits at the intersection of C# / ASP.NET Core delivery, full-stack web development, and practical data engineering curiosity. I care about software that feels professional, reads clearly, and solves real business problems with reliability and polish.";
+        profile.Email = "mohalemarothi@gmail.com";
+        profile.Phone = "072 069 7425";
+        profile.Location = "Cape Town, South Africa";
+        profile.ResumeUrl = "#resume";
+        profile.HeroPrimaryCtaUrl = "/Projects";
+        profile.HeroSecondaryCtaUrl = "/Contact";
 
         if (!await context.Projects.AnyAsync())
         {
@@ -129,12 +130,25 @@ public static class ApplicationDbInitializer
                 new ServiceOffering { Title = "Tutoring / Technical Training", Description = "Technical mentoring, coaching, and guided learning support for software development concepts and projects.", DisplayOrder = 4 });
         }
 
-        if (!await context.SocialLinks.AnyAsync())
+        var socialLinks = await context.SocialLinks.OrderBy(x => x.DisplayOrder).ToListAsync();
+        while (socialLinks.Count < 3)
         {
-            context.SocialLinks.AddRange(
-                new SocialLink { Platform = "GitHub", Url = "https://github.com/Marothi-Mohale", DisplayOrder = 1 },
-                new SocialLink { Platform = "Email", Url = "mailto:hello@marothimohale.dev", DisplayOrder = 2 });
+            var socialLink = new SocialLink();
+            socialLinks.Add(socialLink);
+            context.SocialLinks.Add(socialLink);
         }
+
+        socialLinks[0].Platform = "GitHub";
+        socialLinks[0].Url = "https://github.com/Marothi-Mohale";
+        socialLinks[0].DisplayOrder = 1;
+
+        socialLinks[1].Platform = "Email";
+        socialLinks[1].Url = "mailto:mohalemarothi@gmail.com";
+        socialLinks[1].DisplayOrder = 2;
+
+        socialLinks[2].Platform = "UCT Email";
+        socialLinks[2].Url = "mailto:mhlmar030@myuct.ac.za";
+        socialLinks[2].DisplayOrder = 3;
 
         if (!await context.BlogPosts.AnyAsync())
         {

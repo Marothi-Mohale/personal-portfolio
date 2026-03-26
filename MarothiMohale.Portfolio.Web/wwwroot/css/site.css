@@ -148,6 +148,20 @@ p { color: var(--muted); line-height: 1.75; margin: 0 0 1rem; }
 }
 .hero-profile-card, .content-panel, .trust-card { padding: 2rem; }
 .hero-role-list, .badge-row, .trust-strip { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.hero-portrait-shell {
+  width: min(100%, 260px);
+  margin-bottom: 1.5rem;
+  padding: 0.45rem;
+  border-radius: 1.5rem;
+  background: linear-gradient(135deg, rgba(105, 214, 202, 0.26), rgba(141, 197, 255, 0.26));
+}
+.hero-portrait, .contact-portrait {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 1.2rem;
+  box-shadow: var(--shadow-soft);
+}
 .trust-strip { margin-top: 1.5rem; }
 .trust-strip span {
   padding: 0.6rem 0.8rem;
@@ -299,6 +313,16 @@ p { color: var(--muted); line-height: 1.75; margin: 0 0 1rem; }
   display: grid;
   gap: 0.9rem;
   margin-top: 1.4rem;
+}
+.contact-profile-lockup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.contact-portrait {
+  width: 88px;
+  border-radius: 1rem;
 }
 .credential-list div {
   display: flex;
@@ -473,4 +497,5 @@ span.field-validation-error, .validation-summary { color: #ffb7b7; }
   .hero-profile-card, .content-panel, .trust-card, .proof-card, .card-body { padding: 1.3rem; }
   .project-image { height: 210px; }
   .skill-row, .credential-list div { flex-direction: column; align-items: start; }
+  .contact-profile-lockup { align-items: flex-start; }
 }

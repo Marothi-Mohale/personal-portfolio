@@ -24,12 +24,16 @@
         <div class="hero-stack reveal reveal-up-delayed">
             <div class="hero-panel hero-profile-card">
                 <p class="eyebrow">Positioning</p>
+                <div class="hero-portrait-shell">
+                    <img src="~/images/marothi-profile.jfif" asp-append-version="true" alt="Portrait of Marothi Mohale" class="hero-portrait" />
+                </div>
                 <h2>@Model.Profile.FullName</h2>
                 <p>@Model.Profile.About</p>
                 <div class="hero-role-list">
                     <span class="badge badge-strong">C# / ASP.NET Core builder</span>
                     <span class="badge">Full-stack web developer</span>
                     <span class="badge">Data engineering enthusiast</span>
+                    <span class="badge">BSc Computer Science and Business Computing</span>
                 </div>
             </div>
             <div class="hero-proof-grid">
@@ -115,6 +119,7 @@
         <div class="content-panel reveal reveal-up">
             <p>@Model.Profile.About</p>
             <div class="credential-list">
+                <div><span>Education</span><strong>BSc in Computer Science and Business Computing</strong></div>
                 <div><span>Location</span><strong>@Model.Profile.Location</strong></div>
                 <div><span>Resume</span><strong><a href="@Model.Profile.ResumeUrl">Download placeholder</a></strong></div>
                 <div><span>Focus</span><strong>Web applications, APIs, and data-aware solutions</strong></div>

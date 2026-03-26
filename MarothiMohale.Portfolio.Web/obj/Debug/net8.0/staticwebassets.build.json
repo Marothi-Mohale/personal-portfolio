@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OCA0b+nOMvGngOuTU9mhsJH+L5eEI1F8Udjs3PX236A=",
+  "Hash": "T49o8h04VXp50OgcP7W02ENq+gJv9xeEgIjzVUQccIo=",
   "Source": "MarothiMohale.Portfolio.Web",
   "BasePath": "_content/MarothiMohale.Portfolio.Web",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\ASUS\\marothi-mohale\\MarothiMohale.Portfolio.Web\\wwwroot\\images\\marothi-profile.jfif",
+      "SourceId": "MarothiMohale.Portfolio.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ASUS\\marothi-mohale\\MarothiMohale.Portfolio.Web\\wwwroot\\",
+      "BasePath": "_content/MarothiMohale.Portfolio.Web",
+      "RelativePath": "images/marothi-profile.jfif",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\marothi-profile.jfif"
     },
     {
       "Identity": "C:\\Users\\ASUS\\marothi-mohale\\MarothiMohale.Portfolio.Web\\wwwroot\\images\\project-api-design.svg",
