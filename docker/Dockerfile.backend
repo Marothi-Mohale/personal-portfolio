@@ -1,0 +1,29 @@
+# Build stage
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+# Copy csproj and restore dependencies
+COPY ["src/backend/MarothiMohale.Portfolio.Api/MarothiMohale.Portfolio.Api.csproj", "src/backend/MarothiMohale.Portfolio.Api/"]
+RUN dotnet restore "src/backend/MarothiMohale.Portfolio.Api/MarothiMohale.Portfolio.Api.csproj"
+
+# Copy everything else and build
+COPY . .
+WORKDIR "/src/src/backend/MarothiMohale.Portfolio.Api"
+RUN dotnet build "MarothiMohale.Portfolio.Api.csproj" -c Release -o /app/build
+
+# Publish
+RUN dotnet publish "MarothiMohale.Portfolio.Api.csproj" -c Release -o /app/publish /p:UseAppHost=false
+
+# Runtime stage
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+WORKDIR /app
+
+# Create non-root user
+RUN adduser --disabled-password --gecos '' appuser && chown -R appuser:appuser /app
+USER appuser
+
+COPY --from=build /app/publish .
+
+EXPOSE 8080
+
+ENTRYPOINT ["dotnet", "MarothiMohale.Portfolio.Api.dll"]

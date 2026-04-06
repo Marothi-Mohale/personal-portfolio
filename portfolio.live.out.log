@@ -2039,3 +2039,295 @@ dbug: Microsoft.EntityFrameworkCore.Database.Connection[20008]
       Disposed connection to database 'main' on server 'portfolio.db' (0ms).
 info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
       Request finished HTTP/1.1 GET http://127.0.0.1:8080/projects - 200 - text/html;+charset=utf-8 5.6829ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:8080/Projects - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'MarothiMohale.Portfolio.Web.Controllers.ProjectsController.Index (MarothiMohale.Portfolio.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Index", controller = "Projects", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Threading.CancellationToken) on controller MarothiMohale.Portfolio.Web.Controllers.ProjectsController (MarothiMohale.Portfolio.Web).
+dbug: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 8.0.25 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:8.0.25' with options: CommandTimeout=10 
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20005]
+      Creating DbConnection.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20006]
+      Created DbConnection. (0ms).
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Index.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Index executed in 2.772ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action MarothiMohale.Portfolio.Web.Controllers.ProjectsController.Index (MarothiMohale.Portfolio.Web) in 5.444ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'MarothiMohale.Portfolio.Web.Controllers.ProjectsController.Index (MarothiMohale.Portfolio.Web)'
+info: MarothiMohale.Portfolio.Web.Middleware.RequestLoggingMiddleware[0]
+      HTTP GET /Projects responded 200 in 5ms
+dbug: Microsoft.EntityFrameworkCore.Infrastructure[10407]
+      'ApplicationDbContext' disposed.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20007]
+      Disposing connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20008]
+      Disposed connection to database 'main' on server 'portfolio.db' (0ms).
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:8080/Projects - 200 - text/html;+charset=utf-8 6.1928ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:8080/css/site.css?v=u7xYb6tjeSMXIuweH_SLhNeq6UbzxseWK0SsDXoWAaw - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:8080/MarothiMohale.Portfolio.Web.styles.css - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'MarothiMohale.Portfolio.Web.Controllers.ErrorController.NotFoundPage (MarothiMohale.Portfolio.Web)'
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\wwwroot\css\site.css'
+info: MarothiMohale.Portfolio.Web.Middleware.RequestLoggingMiddleware[0]
+      HTTP GET /css/site.css responded 200 in 2ms
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "NotFoundPage", controller = "Error", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NotFoundPage() on controller MarothiMohale.Portfolio.Web.Controllers.ErrorController (MarothiMohale.Portfolio.Web).
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view NotFound.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:8080/css/site.css?v=u7xYb6tjeSMXIuweH_SLhNeq6UbzxseWK0SsDXoWAaw - 200 18931 text/css 3.3877ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:8080/js/site.js?v=AVbvk-tw9IN3nnPxVBUK9ttu4hBDiduEwntzeNdJB78 - - -
+dbug: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 8.0.25 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:8.0.25' with options: CommandTimeout=10 
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[6]
+      The file /js/site.js was not modified
+info: MarothiMohale.Portfolio.Web.Middleware.RequestLoggingMiddleware[0]
+      HTTP GET /js/site.js responded 304 in 0ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:8080/js/site.js?v=AVbvk-tw9IN3nnPxVBUK9ttu4hBDiduEwntzeNdJB78 - 304 - text/javascript 1.1903ms
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20005]
+      Creating DbConnection.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20006]
+      Created DbConnection. (0ms).
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:8080/images/project-api-design.svg - - -
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view NotFound executed in 15.8496ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action MarothiMohale.Portfolio.Web.Controllers.ErrorController.NotFoundPage (MarothiMohale.Portfolio.Web) in 16.0823ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'MarothiMohale.Portfolio.Web.Controllers.ErrorController.NotFoundPage (MarothiMohale.Portfolio.Web)'
+info: MarothiMohale.Portfolio.Web.Middleware.RequestLoggingMiddleware[0]
+      HTTP GET /MarothiMohale.Portfolio.Web.styles.css responded 404 in 18ms
+dbug: Microsoft.EntityFrameworkCore.Infrastructure[10407]
+      'ApplicationDbContext' disposed.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20007]
+      Disposing connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20008]
+      Disposed connection to database 'main' on server 'portfolio.db' (0ms).
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:8080/MarothiMohale.Portfolio.Web.styles.css - 404 - text/html;+charset=utf-8 18.8906ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[16]
+      Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:8080/MarothiMohale.Portfolio.Web.styles.css, Response status code: 404
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/images/project-api-design.svg'. Physical path: 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\wwwroot\images\project-api-design.svg'
+info: MarothiMohale.Portfolio.Web.Middleware.RequestLoggingMiddleware[0]
+      HTTP GET /images/project-api-design.svg responded 200 in 2ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:8080/images/project-api-design.svg - 200 2385 image/svg+xml 2.4076ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:8080/images/project-levels-on-ice.svg - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/images/project-levels-on-ice.svg'. Physical path: 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\wwwroot\images\project-levels-on-ice.svg'
+info: MarothiMohale.Portfolio.Web.Middleware.RequestLoggingMiddleware[0]
+      HTTP GET /images/project-levels-on-ice.svg responded 200 in 2ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:8080/images/project-levels-on-ice.svg - 200 1650 image/svg+xml 4.6420ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:8080/images/project-nickys-manicure.svg - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/images/project-nickys-manicure.svg'. Physical path: 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\wwwroot\images\project-nickys-manicure.svg'
+info: MarothiMohale.Portfolio.Web.Middleware.RequestLoggingMiddleware[0]
+      HTTP GET /images/project-nickys-manicure.svg responded 200 in 2ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:8080/images/project-nickys-manicure.svg - 200 1652 image/svg+xml 2.8112ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:8080/Projects - - -
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'MarothiMohale.Portfolio.Web.Controllers.ProjectsController.Index (MarothiMohale.Portfolio.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "Index", controller = "Projects", area = "", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.Threading.CancellationToken) on controller MarothiMohale.Portfolio.Web.Controllers.ProjectsController (MarothiMohale.Portfolio.Web).
+dbug: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 8.0.25 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:8.0.25' with options: CommandTimeout=10 
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20005]
+      Creating DbConnection.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20006]
+      Created DbConnection. (0ms).
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Index.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Index executed in 4.3179ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action MarothiMohale.Portfolio.Web.Controllers.ProjectsController.Index (MarothiMohale.Portfolio.Web) in 7.5476ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'MarothiMohale.Portfolio.Web.Controllers.ProjectsController.Index (MarothiMohale.Portfolio.Web)'
+info: MarothiMohale.Portfolio.Web.Middleware.RequestLoggingMiddleware[0]
+      HTTP GET /Projects responded 200 in 8ms
+dbug: Microsoft.EntityFrameworkCore.Infrastructure[10407]
+      'ApplicationDbContext' disposed.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20007]
+      Disposing connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20008]
+      Disposed connection to database 'main' on server 'portfolio.db' (0ms).
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:8080/Projects - 200 - text/html;+charset=utf-8 10.2449ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:8080/MarothiMohale.Portfolio.Web.styles.css - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:8080/css/site.css?v=u7xYb6tjeSMXIuweH_SLhNeq6UbzxseWK0SsDXoWAaw - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[6]
+      The file /css/site.css was not modified
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[0]
+      Executing endpoint 'MarothiMohale.Portfolio.Web.Controllers.ErrorController.NotFoundPage (MarothiMohale.Portfolio.Web)'
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[102]
+      Route matched with {action = "NotFoundPage", controller = "Error", area = "", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult NotFoundPage() on controller MarothiMohale.Portfolio.Web.Controllers.ErrorController (MarothiMohale.Portfolio.Web).
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view NotFound.
+info: MarothiMohale.Portfolio.Web.Middleware.RequestLoggingMiddleware[0]
+      HTTP GET /css/site.css responded 304 in 0ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:8080/css/site.css?v=u7xYb6tjeSMXIuweH_SLhNeq6UbzxseWK0SsDXoWAaw - 304 - text/css 1.0055ms
+dbug: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 8.0.25 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:8.0.25' with options: CommandTimeout=10 
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20005]
+      Creating DbConnection.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20006]
+      Created DbConnection. (0ms).
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20000]
+      Opening connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20001]
+      Opened connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20002]
+      Closing connection to database 'main' on server 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20003]
+      Closed connection to database 'main' on server 'portfolio.db' (0ms).
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:8080/images/project-api-design.svg - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[6]
+      The file /images/project-api-design.svg was not modified
+info: MarothiMohale.Portfolio.Web.Middleware.RequestLoggingMiddleware[0]
+      HTTP GET /images/project-api-design.svg responded 304 in 0ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:8080/images/project-api-design.svg - 304 - image/svg+xml 0.3806ms
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view NotFound executed in 3.7693ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker[105]
+      Executed action MarothiMohale.Portfolio.Web.Controllers.ErrorController.NotFoundPage (MarothiMohale.Portfolio.Web) in 4.0382ms
+info: Microsoft.AspNetCore.Routing.EndpointMiddleware[1]
+      Executed endpoint 'MarothiMohale.Portfolio.Web.Controllers.ErrorController.NotFoundPage (MarothiMohale.Portfolio.Web)'
+info: MarothiMohale.Portfolio.Web.Middleware.RequestLoggingMiddleware[0]
+      HTTP GET /MarothiMohale.Portfolio.Web.styles.css responded 404 in 5ms
+dbug: Microsoft.EntityFrameworkCore.Infrastructure[10407]
+      'ApplicationDbContext' disposed.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20007]
+      Disposing connection to database 'main' on server 'portfolio.db'.
+dbug: Microsoft.EntityFrameworkCore.Database.Connection[20008]
+      Disposed connection to database 'main' on server 'portfolio.db' (0ms).
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:8080/MarothiMohale.Portfolio.Web.styles.css - 404 - text/html;+charset=utf-8 5.4308ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[16]
+      Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:8080/MarothiMohale.Portfolio.Web.styles.css, Response status code: 404
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:8080/images/project-levels-on-ice.svg - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[6]
+      The file /images/project-levels-on-ice.svg was not modified
+info: MarothiMohale.Portfolio.Web.Middleware.RequestLoggingMiddleware[0]
+      HTTP GET /images/project-levels-on-ice.svg responded 304 in 4ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:8080/images/project-levels-on-ice.svg - 304 - image/svg+xml 5.2787ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:8080/images/project-nickys-manicure.svg - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[6]
+      The file /images/project-nickys-manicure.svg was not modified
+info: MarothiMohale.Portfolio.Web.Middleware.RequestLoggingMiddleware[0]
+      HTTP GET /images/project-nickys-manicure.svg responded 304 in 0ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:8080/images/project-nickys-manicure.svg - 304 - image/svg+xml 0.4432ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:8080/images/project-secure-helpdesk.svg - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/images/project-secure-helpdesk.svg'. Physical path: 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\wwwroot\images\project-secure-helpdesk.svg'
+info: MarothiMohale.Portfolio.Web.Middleware.RequestLoggingMiddleware[0]
+      HTTP GET /images/project-secure-helpdesk.svg responded 200 in 0ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:8080/images/project-secure-helpdesk.svg - 200 1638 image/svg+xml 1.6137ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:8080/images/project-clinic-admin.svg - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/images/project-clinic-admin.svg'. Physical path: 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\wwwroot\images\project-clinic-admin.svg'
+info: MarothiMohale.Portfolio.Web.Middleware.RequestLoggingMiddleware[0]
+      HTTP GET /images/project-clinic-admin.svg responded 200 in 1ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:8080/images/project-clinic-admin.svg - 200 1816 image/svg+xml 1.5457ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:8080/images/project-perfect-tutorials.svg - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/images/project-perfect-tutorials.svg'. Physical path: 'C:\Users\ASUS\marothi-mohale\MarothiMohale.Portfolio.Web\wwwroot\images\project-perfect-tutorials.svg'
+info: MarothiMohale.Portfolio.Web.Middleware.RequestLoggingMiddleware[0]
+      HTTP GET /images/project-perfect-tutorials.svg responded 200 in 0ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:8080/images/project-perfect-tutorials.svg - 200 1663 image/svg+xml 0.9258ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost:8080/favicon.ico - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[6]
+      The file /favicon.ico was not modified
+info: MarothiMohale.Portfolio.Web.Middleware.RequestLoggingMiddleware[0]
+      HTTP GET /favicon.ico responded 304 in 1ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost:8080/favicon.ico - 304 - image/x-icon 1.6161ms
